@@ -3,9 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration</title>
+    <link rel="stylesheet" href="/scss/sign.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
-    <h1>SIGN UP</h1>
+    <!-- <h1>SIGN UP</h1> -->
+
+    <div class="container">
+
+        <div class="center">
+
+            <div class="column">
+                <h1>Регистрация</h1>
+
+                <form name="login" id="registrationForm">
+                    
+                    <div class="required">
+                        <input type="email" id="username" placeholder="Почта" name="email">
+                        <span class="error-text"></span>
+                    </div>
+
+                    <div class="required">
+                        <input type="text" placeholder="Имя" name="name" id="name">
+                        <span class="error-text"></span>
+                    </div>
+
+                    <div class="required">
+                        <input type="text" placeholder="Фамилия" name="surname" id="surname">
+                        <span class="error-text"></span>
+                    </div>
+
+                    <div class="required">
+                        <input type="password" id="password" placeholder="Пароль" name="password">
+                        <span class="error-text"></span>
+                    </div>
+
+                    <div class="control">
+                        <input type="checkbox" onclick="myFunction()">
+                        <span onclick="myFunction()" class="show_and_hide">Show Password</span>
+                    </div>
+
+                    <!-- <button class="continue">
+                        <div class="join">Отправить</div>
+                        <div class="join">Чтобы продолжить нажмите кнопку продолжить</div>
+                    </button> -->
+
+                    <button class="continue">
+                        <div class="join">Продолжить</div>
+                        <div class="join">Click me and sign up !</div>
+                    </button>
+
+                </form>
+
+                <div class="btns">
+
+                    <a href="/pages/dashboard/">
+                        <button class="continue">
+                            <div class="join">Продолжить</div>
+                            <div class="join">Click me and sign up !</div>
+                        </button>
+                    </a>
+                   
+                    <!-- <a href="#">
+                        <button type="button" onclick="saveRegistration()" class="continue">
+                            <div class="join">Продолжить</div>
+                            <div class="join">Click me and sign up !</div>
+                        </button>
+                    </a> -->
+
+                    <a href="#" class="login_to_account">
+                        Войти в аккаунт
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>

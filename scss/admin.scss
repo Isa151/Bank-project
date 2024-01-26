@@ -1,0 +1,376 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0px 10%;
+    background: #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.account {
+    display: flex;
+    gap: 19px;
+    cursor: pointer;
+}
+
+.account a {
+    color: #000;
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.navbar a {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    margin-right: 21px;
+    transition: .5s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #0047FF;
+    text-decoration: underline;
+}
+
+main {
+    height: 800px;
+}
+
+.management {
+    /* max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 120px; */
+    padding: 120px 0 0 160px;
+}
+
+.management h5 {
+    color: #0047FF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.greetings h1 {
+    color: #000;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 11px;
+}
+
+.my_wallets h2 {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 47px 0 0 160px;
+    /* max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 47px; */
+}
+
+.center {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 21px 160px 0 160px;
+    /* max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 21px; */
+}
+
+.my_credit_card1 {
+    width: 282px;
+    height: 160px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s ease;
+    background: linear-gradient(84deg, #D7816A 2.27%, #BD4F6C 92.26%);
+}
+
+.my_credit_card1:hover {
+    transform: scale(1.05);
+}
+
+.my_credit_card2 {
+    width: 282px;
+    height: 160px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s ease;
+    background: linear-gradient(84deg, #5F0A87 2.27%, #A4508B 92.26%);
+}
+
+.my_credit_card2:hover {
+    transform: scale(1.05);
+}
+
+.my_credit_card3 {
+    width: 282px;
+    height: 160px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s ease;
+    background: linear-gradient(84deg, #20BF55 2.27%, #01BAEF 92.26%);
+}
+
+.my_credit_card3:hover {
+    transform: scale(1.05);
+}
+
+.my_credit_card4 {
+    width: 282px;
+    height: 160px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s ease;
+    background: linear-gradient(84deg, #380036 2.27%, #0CBABA 92.26%);
+}
+
+.my_credit_card4:hover {
+    transform: scale(1.05);
+}
+
+.my_credit_card5 {
+    width: 282px;
+    height: 160px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s ease;
+    background: linear-gradient(84deg, #20BF55 2.27%, #01BAEF 92.26%);
+}
+
+.my_credit_card5:hover {
+    transform: scale(1.05);
+}
+
+.my_credit_card6 {
+    width: 282px;
+    height: 160px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s ease;
+    background: linear-gradient(84deg, #53ca8c 2.27%, #232929 92.26%);
+}
+
+.my_credit_card6:hover {
+    transform: scale(1.05);
+}
+
+.my_credit_card7 {
+    width: 282px;
+    height: 160px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s ease;
+    background: linear-gradient(84deg, #5F0A87 2.27%, #A4508B 92.26%);
+}
+
+.my_credit_card7:hover {
+    transform: scale(1.05);
+}
+
+.first_span {
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 19px;
+    padding-left: 23px;
+}
+
+.second_span {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 78px 0 17px 23px;
+}
+
+.link_card {
+    display: flex;
+    gap: 21px;
+    padding: 21px 0 37px 160px;
+    /* padding: 21px 0 37px 0;
+    max-width: 1200px;
+    margin: 0 auto; */
+}
+
+.link_card a {
+    color: #0047FF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.latest_transactions {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 0 0 32px 160px;
+}
+
+.all_payments {
+    padding: 21px 0 0 160px;
+    /* padding-top: 21px;
+    max-width: 1200px;
+    margin: 0 auto; */
+}
+
+.all_payments p {
+    color: #0047FF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+/* .container3 {
+    max-width: 1200px;
+    margin: 0 auto;
+} */
+
+table {
+    /*  position: absolute;
+    left: 50%;
+    top: 88%;
+    transform: translate(-50%, -50%); */
+    width: 1200px;
+    height: 150px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: 160px;
+    text-align: left;
+}
+
+thead {
+    height: 55px;
+}
+
+th {
+    color: #B9C0D1;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+    border-bottom: 1px solid #B9C0D1;
+}
+
+tr {
+    height: 50px;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-bottom: 1px solid #B9C0D1;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn_add {
+    width: 438px;
+    height: 56px;
+    border-radius: 10px;
+    background: #0047FF;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+    cursor: pointer;
+    transition: .5s ease;
+    margin: 44px 0 0 160px;
+}
+
+.btn_add:hover {
+    width: 500px;
+    height: 56px;
+    transform: scale(1.05);
+    font-size: 20px;
+    border: 2px solid #f5f5f5;
+    box-shadow: 5px 5px 0 red;
+}
+
+.btn_add:active {
+    color: #000;
+    background-color: red;
+    box-shadow: -5px -5px 0 #0047FF;
+}
+
+.transaction_add_btn {
+    width: 175px;
+    height: 35px;
+    border-radius: 10px;
+    background: #0047FF;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+    cursor: pointer;
+    transition: .5s ease;
+    margin: 15px 0 0 0;
+}
+
+.transaction_add_btn:hover {
+    font-size: 20px;
+    transform: scale(1.05);
+    border: 2px solid #f5f5f5;
+    box-shadow: 5px 5px 0 red;
+}
+
+.transaction_add_btn:active {
+    color: #000;
+    background-color: red;
+    box-shadow: -5px -5px 0 #0047FF;
+}
