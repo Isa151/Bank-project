@@ -3,16 +3,10 @@ form {
     text-align: center;
     display: block;
     justify-content: center;
-
 }
 
-h1 {
-    color: #000;
-    font-family: Gilroy;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+.error {
+    border-color: red;
 }
 
 input {
@@ -36,7 +30,7 @@ button {
     margin: 5px;
 }
 
-.signin {
+.signup {
     width: 438px;
     height: 56px;
     flex-shrink: 0;
@@ -51,7 +45,7 @@ button {
     border-width: 0px;
 }
 
-.signup {
+.signin {
     color: #0047FF;
     font-family: Gilroy;
     font-size: 18px;
@@ -60,4 +54,13 @@ button {
     line-height: normal;
     border-width: 0px;
     background-color: #fff;
+}
+
+h1 {
+    color: #000;
+    font-family: Gilroy;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
