@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./index.scss">
 </head>
 <body>
-    <h1>SIGN UP</h1>
+    <form>
+        <h1>Регистрация</h1>
+        <input type="email" placeholder="Почта" class="email" id="email" name="email"> <br>
+        <input type="text" placeholder="Имя" class="name" id="name" name="name"><br>
+        <input type="text" placeholder="Фамилия" class="surname" id="surname" name="surname"> <br>
+        <input type="password" placeholder="Пароль" class="password" id="password" name="password"> <br>
+        <a href="/Bank-project/pages/home/" class="new"> <button class="signup">Продолжить</button></a><br>
+        <a href="/Bank-project/pages/signin/"><button class="signin">Войти на аккаунт</button></a><br>
+    </form>
 </body>
 </html>

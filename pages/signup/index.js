@@ -3,8 +3,8 @@ let next = document.querySelector('.next')
 let signup = document.querySelector('.signup')
 let newW = document.querySelector('.new')
 
-let locale = JSON.parse(localStorage.getItem('email')) || null
-console.log(locale);
+let locale = JSON.parse(localStorage.getItem(ms)) || null
+
 let ms = {
     email: inps.value,
     name: inps.value,
@@ -12,11 +12,12 @@ let ms = {
     password: inps.value
 }
 next.onclick = () => {
-    localStorage.setItem('email', JSON.stringify({
+    localStorage.setItem(ms, JSON.stringify({
         email: email.value,
         name: name.value,
         surname: surname.value,
         password: password.value}))
+        console.log(locale);
 }
 let patterns = {
     surname: /^[a-z ,.'-]+$/i,
@@ -29,7 +30,6 @@ inps.forEach(inp => {
     inp.onkeyup = () => {
         if(patterns[inp.name].test(inp.value)) {
             inp.classList.remove('error')
-            newW.setAttribute('href', 'C:\Shaxrinan\bank\bank-project\pages\signin\index.html');
         } else {
             inp.classList.add('error')
             alert('error!')
