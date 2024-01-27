@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/index.scss">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <h1>LOGIN</h1>
-    
+    <h1>Войти в аккаунт</h1>
+    <form name="register" id="regForm">
+        <input type="text" id="email" name="email" placeholder="Почта" oninput="valInput(this)">
+        <input type="password" id="password" name="password" placeholder="Пароль" oninput="valInput(this)">
+        <input type="checkbox" id="showPassword">
+        <label for="showPassword">Показать пароль</label>
+
+        <a href="/pages/Bank_card/index.html">
+            <button type="button">Продолжить</button>
+        </a>
+    </form>
+
+    <script src="login.js"></script>
+
 </body>
+
 </html>

@@ -1,0 +1,103 @@
+body {
+    font-family: "Gilroy";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input {
+    width: 450px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    padding: 15px 26px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+form button {
+    width: 100%;
+    border-radius: 10px;
+    background: #0047FF;
+    padding: 15px 26px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.login {
+    text-align: center;
+    text-decoration: none;
+    color: #0047FF;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px 26px;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+label[for="showPassword"] {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+label[for="showPassword"]::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #555;
+    background-color: #fff;
+}
+
+label[for="showPassword"]:hover::before,
+label[for="showPassword"]:active::before {
+    border: 2px solid #007bff;
+}
+
+label[for="showPassword"]::after {
+    content: '\2713';
+    position: absolute;
+    left: 2px;
+    top: -2px;
+    font-size: 16px;
+    color: #007bff;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked+label[for="showPassword"]::after {
+    visibility: visible;
+}

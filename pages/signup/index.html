@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <h1>SIGN UP</h1>
+    <h1>Регистрация</h1>
+    <form name="register" id="regForm">
+        <input type="text" id="email" name="email" placeholder="Почта" oninput="valInput(this)">
+        <input type="text" id="firstName" name="firstName" placeholder="Имя" oninput="valInput(this)">
+        <input type="text" id="lastName" name="lastName" placeholder="Фамилия" oninput="valInput(this)">
+        <input type="password" id="password" name="password" placeholder="Пароль" oninput="valInput(this)">
+        <input type="checkbox" id="showPassword">
+        <label for="showPassword">Показать пароль</label>
+
+        <a href="/pages/signin/index.html"> 
+            <button type="button">Продолжить</button>
+        </a>
+        <a href="login.html" class="login">Войти в аккаунт</a>
+    </form>
+
+    <script src="index.js"></script>
 </body>
+
 </html>
