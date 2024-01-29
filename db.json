@@ -1,25 +1,18 @@
 {
   "users": [
     {
-      "id": "f737",
-      "email": "dsarifkulo021@gmail.com",
-      "name": "Daler",
-      "surname": "Daler",
-      "password": "123123213"
+      "id": "19c7",
+      "email": "axrorshariov@gmail.com",
+      "name": "e",
+      "surname": "q",
+      "password": "123"
     },
     {
-      "id": "8d79",
-      "email": "dsarifkulo028@gmail.com",
-      "name": "Daler",
-      "surname": "Sharifkulov",
-      "password": "1234Daler"
-    },
-    {
-      "id": "e6fa",
-      "email": "dsarifkulo029@gmail.com",
-      "name": "Daler",
-      "surname": "Daler",
-      "password": "123123123213"
+      "id": "b775",
+      "email": "axorshariov@gmail.com",
+      "name": "e",
+      "surname": "21",
+      "password": "1"
     }
   ],
   "wallets": [],

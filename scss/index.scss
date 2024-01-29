@@ -1,5 +1,187 @@
 * {
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+header {
+    background-color: rgb(226, 226, 226);
+}
+
+.cont {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.cont a {
+    text-decoration: none;
+    color: rgb(54, 54, 54);
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.cont button {
+    border: none;
+    background-color: transparent;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+
+h1 {
+    font-size: 48px;
+    padding-bottom: 15px;
+}
+
+.gmail {
+    text-decoration: none;
+    color: #0047FF;
+}
+
+.wallets {
+    margin-top: 67px;
+}
+
+.wallets h2 {
+    font-weight: 300;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.wallet-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.card {
+
+    width: 282px;
+    height: 160px;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 0;
+    background: linear-gradient(90deg, rgb(191, 78, 185) 26%, rgb(123, 129, 255) 100%);
+
+    h3 {
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    p {
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    transition: 1s;
+}
+
+.card:hover {
+    rotate: 1deg;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.etransactions {
+    margin-top: 50px;
+}
+
+.etransactions h2 {
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+table {
+    margin-bottom: 20px;
+    border-collapse: collapse;
+
+    th {
+        text-align: start;
+        color: #bdbdbd;
+        border-bottom: 1px solid #d3d3d3;
+        width: 200px;
+        font-weight: 500;
+    }
+
+    td {
+        border-bottom: 1px solid #d3d3d3;
+        padding: 15px 5px 0 0;
+        width: 200px;
+    }
+}
+
+/* :root {
+    
+} */
+
+.button-effect {
+    margin: 20px 0;
+}
+
+
+.effect {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    background-color: #0047FF;
+    font-size: 18px;
+    padding: 10px 0px;
+    width: 250px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.2s linear 0s;
+}
+
+
+.effect:before {
+    content: ">";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+}
+
+.effect:hover {
+    text-indent: -20px;
+}
+
+.effect:hover:before {
+    opacity: 1;
+    text-indent: 0px;
 }
