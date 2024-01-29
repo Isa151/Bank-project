@@ -1,7 +1,7 @@
-const urlbackend = "http://localhost:9090/users";
+/* const urlbackend = "http://localhost:9090/users";
 
 axios.get(urlbackend)
-    .then((res) => console.log(res.data))
+    .then((res) => console.log(res.data)) */
 
 function myFunction() {
     let x = document.getElementById("password");
@@ -86,11 +86,11 @@ function submit() {
 
     console.log(user);
 
-    axios.post(urlbackend, user)
+    /* axios.post(urlbackend, user)
     .then((res) => {
         console.log(res.data);
     })
     .catch((error) => {
         console.error(error);
-    });
+    }); */
 }

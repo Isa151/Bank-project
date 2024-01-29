@@ -66,10 +66,10 @@ main {
 }
 
 .management {
-    /* max-width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding-top: 120px; */
-    padding: 120px 0 0 160px;
+    padding-top: 120px;
+    /* padding: 120px 0 0 160px; */
 }
 
 .management h5 {
@@ -95,20 +95,20 @@ main {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    padding: 47px 0 0 160px;
-    /* max-width: 1200px;
+    /* padding: 47px 0 0 160px; */
+    max-width: 1200px;
     margin: 0 auto;
-    padding-top: 47px; */
+    padding-top: 47px;
 }
 
 .center {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
-    padding: 21px 160px 0 160px;
-    /* max-width: 1200px;
+    /* padding: 21px 160px 0 160px; */
+    max-width: 1200px;
     margin: 0 auto;
-    padding-top: 21px; */
+    padding-top: 21px;
 }
 
 .my_credit_card1 {
@@ -224,10 +224,10 @@ main {
 .link_card {
     display: flex;
     gap: 21px;
-    padding: 21px 0 37px 160px;
-    /* padding: 21px 0 37px 0;
+    /* padding: 21px 0 37px 160px; */
+    padding: 21px 0 37px 0;
     max-width: 1200px;
-    margin: 0 auto; */
+    margin: 0 auto;
 }
 
 .link_card a {
@@ -245,14 +245,17 @@ main {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    padding: 0 0 32px 160px;
+    /* padding: 0 0 32px 160px; */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 32px;
 }
 
 .all_payments {
-    padding: 21px 0 0 160px;
-    /* padding-top: 21px;
+    /* padding: 21px 0 0 160px; */
+    padding-top: 21px;
     max-width: 1200px;
-    margin: 0 auto; */
+    margin: 0 auto;
 }
 
 .all_payments p {
@@ -265,10 +268,10 @@ main {
     cursor: pointer;
 }
 
-/* .container3 {
+.container3 {
     max-width: 1200px;
     margin: 0 auto;
-} */
+}
 
 table {
     /*  position: absolute;
@@ -279,7 +282,7 @@ table {
     height: 150px;
     border-collapse: collapse;
     border-spacing: 0;
-    margin-left: 160px;
+    /* margin-left: 160px; */
     text-align: left;
 }
 
@@ -315,6 +318,13 @@ tr:hover {
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 }
 
+.center_btn_add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 44px;
+}
+
 .btn_add {
     width: 438px;
     height: 56px;
@@ -328,7 +338,7 @@ tr:hover {
     border: none;
     cursor: pointer;
     transition: .5s ease;
-    margin: 44px 0 0 160px;
+    /* margin: 44px 0 0 160px; */
 }
 
 .btn_add:hover {
