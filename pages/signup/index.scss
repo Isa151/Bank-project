@@ -1,60 +1,66 @@
 form {
-  align-items: center;
-  text-align: center;
-  display: block;
-  justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: block;
+    justify-content: center;
 }
+
 .error {
     border-color: red;
 }
+
 input {
     margin: 5px;
     width: 408px;
-height: 56px;
-flex-shrink: 0;
-border-radius: 10px;
-border: 1px solid #000;
-background: #FFF;
-color: #000;
-font-family: Gilroy;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-padding: 0px 15px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    color: #000;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0px 15px;
 }
+
 button {
     margin: 5px;
 }
+
 .signup {
     width: 438px;
-height: 56px;
-flex-shrink: 0;
-border-radius: 10px;
-background: #0047FF;
-color: #FFF;
-font-family: Gilroy;
-font-size: 18px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-border-width: 0px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #0047FF;
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-width: 0px;
 }
+
 .signin {
     color: #0047FF;
-font-family: Gilroy;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-border-width: 0px;
-background-color: #fff;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-width: 0px;
+    background-color: #fff;
 }
+
 h1 {
     color: #000;
-font-family: Gilroy;
-font-size: 48px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+    font-family: Gilroy;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }

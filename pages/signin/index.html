@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in</title>
-    <link rel="stylesheet" href="./index.scss">
+    <link rel="stylesheet" href="/pages/signin/index.scss">
+    <title>Document</title>
 </head>
+
 <body>
-    <form>
+    <form name="signin" >
         <h1>Войти в аккаунт</h1>
-        <input type="email" class="email" placeholder="Почта"><br>
-        <input type="password" class="password" placeholder="Пароль"><br>
-        <a href="/Bank-project/pages/home/index.html"> <button class="signin">Продолжить</button></a><br>
-        <a href="/Bank-project/pages/signup/">
-            <button class="signup">Регистрация </button>
-        </a> 
+        <input name="email" type="email" class="email" placeholder="Почта"><br>
+        <input name="password" type="password" class="password" placeholder="Пароль"><br>
+
+        <button class="signin">Продолжить</button> <br>
+        <a href="/pages/signup/" class="signup" >
+            Регистрация 
+        </a>
     </form>
-    <script src="./index.js"></script>
 </body>
+
 </html>

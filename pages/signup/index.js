@@ -1,6 +1,48 @@
+import {
+    getData,
+    postData
+} from "../../modules/helpers";
+const form = document.forms.signup
+
+let signup = document.querySelector('.signup')
+
+form.onsubmit = (e) => {
+    e.preventDefault();
+
+    let fm = new FormData(e.target)
+
+    let user = {}
+
+    fm.forEach((val, key) => {
+        user[key] = val
+    })
+
+    if (user.email && user.password && user.name && user.surname) {
+        getData('/users?email=' + user.email)
+            .then(res => {
+                if (res.status === 200 || res.status === 201) {
+                    if (res.data.length !== 0) {
+                        // alert('user already registered')
+                        signup.setAttribute("href", "/pages/home/")
+                        return
+                    }
+
+                    postData('/users', user)
+                        .then(res => {
+                            if (res.status === 200 || res.status === 201) {
+                                location.assign('/pages/signin/')
+                            }
+                        })
+                }
+            })
+
+    } else {
+        alert('Fill all of these inputs')
+    }
+}
 let inps = document.querySelectorAll('input')
 let next = document.querySelector('.next')
-let signup = document.querySelector('.signup')
+
 let newW = document.querySelector('.new')
 
 let locale = JSON.parse(localStorage.getItem(ms)) || null
