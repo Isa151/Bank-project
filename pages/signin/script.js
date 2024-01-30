@@ -1,55 +1,6 @@
-const url = 'http://localhost:9090';
+import { getData } from "../../modules/helpers";
+
 const form = document.forms.signin;
-
-const getData = async (resource) => {
-    try {
-        const res = await axios.get(url + resource);
-        return res.data;
-    } catch (error) {
-        alert(`${error.message}`);
-    }
-}
-
-form.onsubmit = async (e) => {
-    e.preventDefault();
-
-    let fm = new FormData(form)
-
-    let user = {
-        email: fm.get('email'),
-        password: fm.get('password')
-    }
-
-    fm.forEach((val, key) => {
-        user[key] = val
-    })
-
-    console.log(user);
-
-
-    const validateSignIn = () => {
-        let email = document.getElementById('email').value;
-        let password = document.getElementById('password').value;
-
-        let storedEmail = localStorage.getItem('email');
-        let storedPassword = localStorage.getItem('password');
-
-        if (email === storedEmail && password === storedPassword) {
-            alert('Success');
-            location.assign('/pages/dashboard/');
-            /* return true; */
-        } else {
-            alert('Not Success');
-            /* return false; */
-            location.assign('/pages/trainingsignup/');
-        }
-    }
-
-    validateSignIn();
-}
-
-//
-
 let inps = document.querySelectorAll('input')
 
 let patterns = {
@@ -69,7 +20,7 @@ inps.forEach(inp => {
     }
 })
 
-form.onsubmit_second = (e) => {
+form.onsubmit = (e) => {
     e.preventDefault();
     let isError = false
 
@@ -99,5 +50,19 @@ function submit() {
         password: fm.get('password'),
     }
 
-    console.log(user);
+    getData('/users?email=' + user.email)
+        .then(res => {
+            if(res.data.length > 0) {
+                if(res.data[0].password === user.password) {
+                    let copied_res = res.data[0]
+                    delete copied_res.password
+                    localStorage.setItem('user', JSON.stringify(copied_res))
+                    location.assign('/')
+                } else {
+                    alert('wrong password!')
+                }
+            } else {
+                alert('No user found!')
+            }
+        })
 }

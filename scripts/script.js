@@ -1,8 +1,3 @@
-/* const urlbackend = "http://localhost:9090/users";
-
-axios.get(urlbackend)
-    .then((res) => console.log(res.data)) */
-
 function myFunction() {
     let x = document.getElementById("password");
     let show_and_hide = document.querySelector('.show_and_hide')
@@ -16,19 +11,6 @@ function myFunction() {
     }
 }
 
-// function saveRegistration() {
-//     const username = document.getElementById('username').value;
-//     const password = document.getElementById('password').value;
-//     const name = document.getElementById('name').value
-//     const surname = document.getElementById('surname').value
-//     localStorage.setItem('username', username);
-//     localStorage.setItem('password', password);
-//     localStorage.setItem('name', name);
-//     localStorage.setItem('surname', surname);
-//     // window.location.href = "login.html";
-// }
-
-// regex
 
 let form = document.forms.login
 let inps = document.querySelectorAll('input')
@@ -86,11 +68,4 @@ function submit() {
 
     console.log(user);
 
-    /* axios.post(urlbackend, user)
-    .then((res) => {
-        console.log(res.data);
-    })
-    .catch((error) => {
-        console.error(error);
-    }); */
 }
