@@ -1,13 +1,5 @@
 {
-  "users": [
-    {
-      "id": "cf00",
-      "email": "baxtzod@gmail.com",
-      "name": "Baxtzod",
-      "surname": "Rasulov",
-      "password": "baxt2008"
-    }
-  ],
+  "users": [],
   "wallets": [],
-  "transaction": []
+  "transactions": []
 }
