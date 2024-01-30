@@ -4,110 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Registration</title>
-    <link rel="stylesheet" href="/scss/sign.scss">
+    <link rel="stylesheet" href="/pages/signup/training.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-=======
-    <link rel="stylesheet" href="/pages/signup/index.scss">
-    <title>Document</title>
->>>>>>> 46494d19c503418772f3573b0bbd1252bb2544fd
 </head>
 
 <body>
-<<<<<<< HEAD
-    <!-- <h1>SIGN UP</h1> -->
 
-    <div class="container">
+    <div class="center">
 
-        <div class="center">
-
-            <div class="column">
-                <h1>Регистрация</h1>
-
-                <form name="login" id="registrationForm">
-                    
-                    <div class="required">
-                        <input type="email" id="username" placeholder="Почта" name="email">
-                        <span class="error-text"></span>
-                    </div>
-
-                    <div class="required">
-                        <input type="text" placeholder="Имя" name="name" id="name">
-                        <span class="error-text"></span>
-                    </div>
-
-                    <div class="required">
-                        <input type="text" placeholder="Фамилия" name="surname" id="surname">
-                        <span class="error-text"></span>
-                    </div>
-
-                    <div class="required">
-                        <input type="password" id="password" placeholder="Пароль" name="password">
-                        <span class="error-text"></span>
-                    </div>
-
-                    <div class="control">
-                        <input type="checkbox" onclick="myFunction()">
-                        <span onclick="myFunction()" class="show_and_hide">Show Password</span>
-                    </div>
-
-                    <!-- <button class="continue">
-                        <div class="join">Отправить</div>
-                        <div class="join">Чтобы продолжить нажмите кнопку продолжить</div>
-                    </button> -->
-
-                    <button class="continue">
-                        <div class="join">Продолжить</div>
-                        <div class="join">Click me and sign up !</div>
-                    </button>
-
-                </form>
-
-                <div class="btns">
-
-                    <a href="/pages/dashboard/">
-                        <button class="continue">
-                            <div class="join">Продолжить</div>
-                            <div class="join">Click me and sign up !</div>
-                        </button>
-                    </a>
-                   
-                    <!-- <a href="#">
-                        <button type="button" onclick="saveRegistration()" class="continue">
-                            <div class="join">Продолжить</div>
-                            <div class="join">Click me and sign up !</div>
-                        </button>
-                    </a> -->
-
-                    <a href="#" class="login_to_account">
-                        Войти в аккаунт
-                    </a>
-
-                </div>
-
+        <form name="signup" id="registrationForm" onsubmit="return validateRegistration()">
+            <h1>
+                <span>Р</span>
+                <span>е</span>
+                <span>г</span>
+                <span>и</span>
+                <span>с</span>
+                <span>т</span>
+                <span>р</span>
+                <span>а</span>
+                <span>ц</span>
+                <span>и</span>
+                <span>я</span>
+            </h1>
+            
+            <div class="required">
+                <input type="email" placeholder="Почта" class="email" id="email" name="email"> <br>
+                <span class="error-text"></span>
             </div>
 
-        </div>
+            <div class="required">
+                <input type="text" placeholder="Имя" class="name" id="name" name="name"> <br>
+                <span class="error-text"></span>
+            </div>
+           
+            <div class="required">
+                <input type="text" placeholder="Фамилия" class="surname" id="surname" name="surname"> <br>
+                <span class="error-text"></span>
+            </div>
+
+            <div class="required">
+                <input type="password" placeholder="Пароль" class="password" id="password" name="password"> <br>
+                <span class="error-text"></span>
+            </div>
+            
+            <button class="signup">Продолжить</button> <br>
+            <a href="/pages/signin/" class="signin">Войти на аккаунт</a><br>
+        </form>
 
     </div>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.js"></script> -->
-    <script src="/scripts/script.js"></script>
-=======
-    <form name="signup" >
-        <h1>Регистрация</h1>
-        <input type="email" placeholder="Почта" class="email" id="email" name="email"> <br>
-        <input type="text" placeholder="Имя" class="name" id="name" name="name"><br>
-        <input type="text" placeholder="Фамилия" class="surname" id="surname" name="surname"> <br>
-        <input type="password" placeholder="Пароль" class="password" id="password" name="password"> <br>
-        <button class="signup">Продолжить</button> <br>
-        <a href="/pages/signin/" class="signin" >Войти на аккаунт</a>
-    </form>
 
-
-    <script type="module" src="./index.js"></script>
->>>>>>> 46494d19c503418772f3573b0bbd1252bb2544fd
+    <script type="module" src="/pages/trainingsignup/index.js"></script>
 </body>
 
 </html>
