@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add transaction</title>
+    <link rel="stylesheet" href="/scss/decorate.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+
+    <div class="container">
+
+        <div class="center">
+
+            <div class="column">
+                <h1>Добавить транзакцию</h1>
+
+                <form name="login" id="registrationForm">
+                    
+                    <div class="required">
+                        <input type="text" placeholder="Из кошелька" name="name" id="name">
+                        <span class="error-text"></span>
+                    </div>
+
+                    <div class="required">
+                        <input type="text" placeholder="Сумма" name="password" id="password">
+                        <span class="error-text"></span>
+                    </div>
+
+                    <div class="required">
+                        <input type="text" placeholder="Категория" name="category" id="category">
+                        <span class="error-text"></span>
+                    </div>
+
+                    <button class="continue">
+                        <div class="join">Добавить</div>
+                        <div class="join">Click me !</div>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.js"></script>
+    <script src="/scripts/analytics.js"></script>
+</body>
+</html>

@@ -10,7 +10,7 @@ let a_transactions = document.createElement('a')
 let account = document.createElement('div')
 let a_account = document.createElement('a')
 let a_svg = document.createElement('a')
-let svg_img = document.createElement('div');
+let svg_img = document.createElement('img');
 
 // styling
 header.classList.add('header')
@@ -25,13 +25,12 @@ a_transactions.setAttribute('href', '/pages/transaction/')
 a_home.innerHTML = 'Главная'
 a_my_wallets.innerHTML = 'Мои кошельки'
 a_transactions.innerHTML = 'Мои транзакции'
-a_account.innerHTML = 'Sign up'
-svg_img.innerHTML = 'Sign in'
+a_account.innerHTML = 'baxtzod@gmail.com'
 
-a_account.setAttribute('href', '/pages/trainingsignup/')
-a_svg.setAttribute('href', '/pages/signin/')
-/* svg_img.setAttribute('src', '/icons/icon_logout.svg')
-svg_img.setAttribute('alt', 'icon log out') */
+a_account.setAttribute('href', '#')
+a_svg.setAttribute('href', '/pages/signup/')
+svg_img.setAttribute('src', '/icons/icon_logout.svg')
+svg_img.setAttribute('alt', 'icon log out')
 
 // append
 container_header.append(header)
