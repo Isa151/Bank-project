@@ -6,6 +6,13 @@
       "name": "Daler",
       "surname": "Daler",
       "password": "1234Daler"
+    },
+    {
+      "id": "98c0",
+      "email": "baxtzod@gmail.com",
+      "name": "Baxtzod",
+      "surname": "Rasulov",
+      "password": "baxt2008"
     }
   ],
   "wallets": [],
