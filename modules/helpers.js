@@ -1,11 +1,11 @@
-import axios from "axios";
+import axios from 'axios'
 
-const BASE_URL = "http://localhost:9090"
+const BASE_URL = "http://localhost:9000"
+
 
 export const getData = async (resourse) => {
     try {
         const res = await axios.get(BASE_URL + resourse)
-
         return res
     } catch(error) {
         alert(`${error.message}`)
