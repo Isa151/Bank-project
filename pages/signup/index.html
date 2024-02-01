@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Sign up</title>
     <link rel="stylesheet" href="./index.scss">
+=======
+    <title>Registration</title>
+    <link rel="stylesheet" href="/pages/signup/training.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+>>>>>>> 3451063e9ed567c01da1123ff2857148516c31b0
 </head>
+
 <body>
+<<<<<<< HEAD
     <form>
         <h1>Регистрация</h1>
         <input type="email" placeholder="Почта" class="email" id="email" name="email"> <br>
@@ -16,5 +25,54 @@
         <a href="/Bank-project/pages/home/" class="new"> <button class="signup">Продолжить</button></a><br>
         <a href="/Bank-project/pages/signin/"><button class="signin">Войти на аккаунт</button></a><br>
     </form>
+=======
+
+    <div class="center">
+
+        <form name="signup" id="registrationForm" onsubmit="return validateRegistration()">
+            <h1>
+                <span>Р</span>
+                <span>е</span>
+                <span>г</span>
+                <span>и</span>
+                <span>с</span>
+                <span>т</span>
+                <span>р</span>
+                <span>а</span>
+                <span>ц</span>
+                <span>и</span>
+                <span>я</span>
+            </h1>
+            
+            <div class="required">
+                <input type="email" placeholder="Почта" class="email" id="email" name="email"> <br>
+                <span class="error-text"></span>
+            </div>
+
+            <div class="required">
+                <input type="text" placeholder="Имя" class="name" id="name" name="name"> <br>
+                <span class="error-text"></span>
+            </div>
+           
+            <div class="required">
+                <input type="text" placeholder="Фамилия" class="surname" id="surname" name="surname"> <br>
+                <span class="error-text"></span>
+            </div>
+
+            <div class="required">
+                <input type="password" placeholder="Пароль" class="password" id="password" name="password"> <br>
+                <span class="error-text"></span>
+            </div>
+            
+            <button class="signup">Продолжить</button> <br>
+            <a href="/pages/signin/" class="signin">Войти на аккаунт</a><br>
+        </form>
+
+    </div>
+
+
+    <script type="module" src="/pages/signup/index.js"></script>
+>>>>>>> 3451063e9ed567c01da1123ff2857148516c31b0
 </body>
+
 </html>

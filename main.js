@@ -1,38 +1,10 @@
-let inps = document.querySelectorAll('input')
-let next = document.querySelector('.next')
-let signup = document.querySelector('.signup')
-let newW = document.querySelector('.new')
+import { createHeader, reload_table, reload_wallets } from "./modules/ui";
 
-let locale = JSON.parse(localStorage.getItem('email')) || null
-console.log(locale);
-let ms = {
-    email: inps.value,
-    name: inps.value,
-    surname: inps.value,
-    password: inps.value
-}
-next.onclick = () => {
-    localStorage.setItem('email', JSON.stringify({
-        email: email.value,
-        name: name.value,
-        surname: surname.value,
-        password: password.value}))
-}
-let patterns = {
-    surname: /^[a-z ,.'-]+$/i,
-    name: /^[a-z ,.'-]+$/i,
-    email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
-    password: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/g
-}
-inps.forEach(inp => {
+// headers 
+let container_header = document.querySelector('.container_header')
+let cont_two = document.querySelector('.container2 .center')
+let tbody = document.querySelector('.container3 tbody');
 
-    inp.onkeyup = () => {
-        if(patterns[inp.name].test(inp.value)) {
-            inp.classList.remove('error')
-            newW.setAttribute('href', 'C:\Shaxrinan\bank\bank-project\pages\signin\index.html');
-        } else {
-            inp.classList.add('error')
-            alert('error!')
-        }
-    }
-}) 
+createHeader(container_header)
+reload_wallets([1,2,4,4,5],cont_two)
+reload_table([1,2,4],tbody)
