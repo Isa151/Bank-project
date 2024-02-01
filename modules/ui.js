@@ -1,5 +1,5 @@
 export function createHeader(place) {
-    const {pathname} = location
+    const { pathname } = location
 
     // create
     let header = document.createElement('header')
@@ -17,11 +17,11 @@ export function createHeader(place) {
     nav.classList.add('navbar')
     account.classList.add('account')
 
-    if(pathname === "/") {
+    if (pathname === "/") {
         a_home.classList.add('active')
     } else if (pathname.includes('wallet')) {
         a_my_wallets.classList.add('active')
-    } else  {
+    } else {
         a_transactions.classList.add('active')
     }
 
@@ -32,10 +32,15 @@ export function createHeader(place) {
     a_home.innerHTML = 'Главная'
     a_my_wallets.innerHTML = 'Мои кошельки'
     a_transactions.innerHTML = 'Мои транзакции'
-    a_account.innerHTML = 'Sign up'
+
+    /* a_account.innerHTML = 'Sign up' */
+    a_account.innerHTML = JSON.parse(localStorage.getItem('user')).email;
+    /* let storedUserEmail = JSON.parse(localStorage.getItem('user'));
+    a_account.innerHTML = storedUserEmail.email; */
+
     svg_img.innerHTML = 'Sign in'
 
-    a_account.setAttribute('href', '/pages/trainingsignup/')
+    a_account.setAttribute('href', '/pages/signup/')
     a_svg.setAttribute('href', '/pages/signin/')
     // append
     place.append(header)
@@ -62,7 +67,7 @@ export function reload_wallets(arr, place) {
         let creditCardDiv = document.createElement('div');
         let secondSpanDiv = document.createElement('div');
         let firstSpanDiv = document.createElement('div');
-        
+
         creditCardDiv.style.background = `linear-gradient(84deg, ${getGradient()} 2.27%, ${getGradient()} 92.26%)`
         creditCardDiv.classList.add(`my_credit_card`);
         firstSpanDiv.classList.add('first_span');
@@ -98,6 +103,16 @@ export function reload_table(arr, place) {
 
         // append
         place.append(tr);
-        tr.append(td1,td2,td3,td4,td5);
+        tr.append(td1, td2, td3, td4, td5);
     }
+}
+
+export function storedUserData() {
+    let storedUserData = JSON.parse(localStorage.getItem('user'));
+    document.getElementById('name').innerHTML = 'Добро пожаловать, ' + storedUserData.name + ' ' + storedUserData.surname;
+}
+
+export function storedUserEmail() {
+    let storedUserEmail = JSON.parse(localStorage.getItem('user'));
+    document.getElementById('email').innerHTML = ' ' + storedUserEmail.email;
 }
