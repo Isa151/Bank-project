@@ -1,7 +1,6 @@
-const urlbackend = "http://localhost:9090/users";
+import {getData, postData} from "../modules/helpers.js";
 
-axios.get(urlbackend)
-    .then((res) => console.log(res.data))
+getData('/wallets').then(r => console.log(r.data))
 
 let form = document.forms.login
 let inps = document.querySelectorAll('input')
@@ -38,28 +37,16 @@ form.onsubmit = (e) => {
         }
     })
 
-    if (isError) {
-        alert('Error')
-    } else {
-        submit()
-    }
+    isError ? alert('Error') : submit();
 }
 
 function submit() {
     let fm = new FormData(form)
 
-    let user = {
+    let newWallet = {
         name: fm.get('name'),
         сurrency: fm.get('сurrency')
     }
 
-    console.log(user);
 
-    axios.post(urlbackend, user)
-    .then((res) => {
-        console.log(res.data);
-    })
-    .catch((error) => {
-        console.error(error);
-    });
 }

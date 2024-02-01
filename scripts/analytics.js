@@ -1,6 +1,8 @@
+import {getData, postData} from "../modules/helpers.js";
+
 const urlbackend = "http://localhost:9090/users";
 
-axios.get(urlbackend)
+getData(urlbackend)
     .then((res) => console.log(res.data))
 
 let form = document.forms.login
@@ -57,7 +59,7 @@ function submit() {
     
     console.log(user);
 
-    axios.post(urlbackend, user)
+    postData(urlbackend, user)
     .then((res) => {
         console.log(res.data);
     })
