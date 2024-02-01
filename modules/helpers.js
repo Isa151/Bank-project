@@ -6,6 +6,10 @@ const BASE_URL = "http://localhost:9000"
 export const getData = async (resourse) => {
     try {
         const res = await axios.get(BASE_URL + resourse)
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
         return res
     } catch(error) {
         alert(`${error.message}`)

@@ -33,6 +33,7 @@ form {
     display: block;
     justify-content: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
     
   }
   h1 {
@@ -87,17 +88,23 @@ border-width: 0px;
 background-color: #fff;
   }
 =======
+=======
+>>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
 
 }
 
 h1 {
     color: #000;
     font-family: Gilroy;
+<<<<<<< HEAD
+>>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
+=======
 >>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+<<<<<<< HEAD
     text-align: center;
     padding-bottom: 38px;
     text-shadow: -15px 15px 15px rgba(0, 0, 0.2), 15px -15px 15px rgba(255, 255, 255, 0.2);
@@ -122,10 +129,25 @@ input[type='email'] {
     background: #FFF;
     padding-left: 25px;
     color: #000;
+=======
+}
+
+input {
+    margin: 5px;
+    width: 408px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    color: #000;
+    font-family: Gilroy;
+>>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+<<<<<<< HEAD
 <<<<<<< HEAD
     outline: none;
     transition: .5s ease-in;
@@ -162,11 +184,16 @@ input[type='password']:hover {
     border: 2px solid rgb(51, 51, 255);
     box-shadow: 5px 5px 0 rgb(51, 51, 255);
 =======
+=======
+>>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
     padding: 0px 15px;
 }
 
 button {
     margin: 5px;
+<<<<<<< HEAD
+>>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
+=======
 >>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
 }
 
@@ -174,22 +201,29 @@ button {
     width: 438px;
     height: 56px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     border-radius: 10px;
     background: #0047FF;
     border: none;
     cursor: pointer;
     color: #FFF;
 =======
+=======
+>>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
     flex-shrink: 0;
     border-radius: 10px;
     background: #0047FF;
     color: #FFF;
     font-family: Gilroy;
+<<<<<<< HEAD
+>>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
+=======
 >>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+<<<<<<< HEAD
 <<<<<<< HEAD
     text-decoration: none;
     transition: .5s ease;
@@ -210,11 +244,18 @@ button {
 =======
     border-width: 0px;
 >>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
+=======
+    border-width: 0px;
+>>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
 }
 
 .signup {
     color: #0047FF;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    font-family: Gilroy;
+>>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
 =======
     font-family: Gilroy;
 >>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
@@ -222,6 +263,7 @@ button {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+<<<<<<< HEAD
 <<<<<<< HEAD
     background-color: #fff;
     text-decoration: none;
@@ -260,3 +302,8 @@ form .error-field span::after {
 >>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
 }
 >>>>>>> 3451063e9ed567c01da1123ff2857148516c31b0
+=======
+    border-width: 0px;
+    background-color: #fff;
+}
+>>>>>>> 675208f4a9efbac127a7abf9d5c87ce6c9d17750
