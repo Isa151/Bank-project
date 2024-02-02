@@ -1,7 +1,9 @@
-const urlbackend = "http://localhost:9090/users";
+import { postData } from "../modules/helpers"
 
-axios.get(urlbackend)
-    .then((res) => console.log(res.data))
+// const urlbackend = "http://localhost:9090/users";
+
+// axios.get(urlbackend)
+//     .then((res) => console.log(res.data))
 
 let form = document.forms.login
 let inps = document.querySelectorAll('input')
@@ -9,6 +11,7 @@ let inps = document.querySelectorAll('input')
 let patterns = {
     name: /^[a-z ,.'-]+$/i,
     сurrency: /^[a-z ,.'-]+$/i,
+    balance: /[1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]/
 }
 
 inps.forEach(inp => {
@@ -25,6 +28,20 @@ inps.forEach(inp => {
 
 form.onsubmit = (e) => {
     e.preventDefault();
+
+    let fmm = new FormData(e.target)
+
+    let wallet = {}
+
+    fmm.forEach((val, key) => {
+        wallet[key] = val
+    })
+
+    postData('/wallets', wallet)
+        .then(res => {
+            console.log(res);
+        })
+
     let isError = false
 
     inps.forEach(inp => {
@@ -50,16 +67,18 @@ function submit() {
 
     let user = {
         name: fm.get('name'),
-        сurrency: fm.get('сurrency')
+        сurrency: fm.get('сurrency'),
+        balance: fm.get('balance'),
+        /* select: fm.get('select') */
     }
 
     console.log(user);
 
-    axios.post(urlbackend, user)
-    .then((res) => {
-        console.log(res.data);
-    })
-    .catch((error) => {
-        console.error(error);
-    });
+    // axios.post(urlbackend, user)
+    // .then((res) => {
+    //     console.log(res.data);
+    // })
+    // .catch((error) => {
+    //     console.error(error);
+    // });
 }
