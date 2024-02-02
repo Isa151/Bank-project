@@ -7,7 +7,8 @@ let inps = document.querySelectorAll('input')
 
 let patterns = {
     name: /^[a-z ,.'-]+$/i,
-    сurrency: /^[a-z ,.'-]+$/i,
+    currency: /^[a-z ,.'-]+$/i,
+    balance: /^\$?[0-9][0-9,]*[0-9]\.?[0-9]{0,2}$/i
 }
 
 inps.forEach(inp => {
@@ -45,7 +46,8 @@ function submit() {
 
     let newWallet = {
         name: fm.get('name'),
-        сurrency: fm.get('сurrency')
+        currency: fm.get('currency'),
+        balance: fm.get('balance')
     }
 
 
