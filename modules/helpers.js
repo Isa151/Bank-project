@@ -25,7 +25,7 @@ export const getSymbols = async () => {
     const symbs = localStorage.getItem('symbols')
 
     if(symbs) {
-        return symbs
+        return JSON.parse(symbs)
     }
 
     try {
