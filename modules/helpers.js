@@ -1,7 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = "http://localhost:9090"
-
+const BASE_URL = import.meta.env.VITE_BASE_URL
 
 export const getData = async (resourse) => {
     try {
