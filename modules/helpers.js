@@ -11,7 +11,6 @@ export const getData = async (resourse) => {
     }
 }
 
-
 export const postData = async (resourse, body) => {
     try {
         const res = await axios.post(BASE_URL + resourse, body)
@@ -19,5 +18,30 @@ export const postData = async (resourse, body) => {
         return res
     } catch(error) {
         alert(`${error.message}`)
+    }
+}
+
+export const getSymbols = async () => {
+    const symbs = localStorage.getItem('symbols')
+
+    if(symbs) {
+        return symbs
+    }
+
+    try {
+        const res = await axios.get("https://api.apilayer.com/fixer/symbols", {
+            headers: {
+                apikey: import.meta.env.VITE_API_KEY
+            }
+        })
+
+        if(res.status === 200 || res.status === 201) {
+            localStorage.setItem('symbols', JSON.stringify(res.data.symbols))
+
+            return res.data
+        }
+        
+    } catch(e) {
+        alert('Network error')
     }
 }

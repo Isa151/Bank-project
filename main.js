@@ -10,6 +10,8 @@ reload_wallets([1, 2, 4, 4, 5], cont_two)
 reload_table([1, 2, 4], tbody)
 
 
+
+
 // let storedUserData = JSON.parse(localStorage.getItem('user'));
 // document.getElementById('name').innerHTML = 'Добро пожаловать, ' + storedUserData.name + ' ' + storedUserData.surname;
 

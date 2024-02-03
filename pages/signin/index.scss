@@ -42,7 +42,7 @@ form {
     gap: 16px;
 }
 
-input[type='email'] {
+input[type='email'], select {
     width: 438px;
     height: 56px;
     border-radius: 10px;
@@ -131,14 +131,14 @@ input[type='password']:hover {
     text-align: center;
 }
 
-.error-field input,
+.error-field input, select
 .error-field span {
     color: red !important;
     border-color: red !important;
     box-shadow: 5px 5px 0 red !important;
 }
 
-form .required input {
+form .required input, select {
     position: relative;
     border-color: blue;
 }
