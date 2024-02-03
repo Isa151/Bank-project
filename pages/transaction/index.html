@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My transactions</title>
+    <link rel="stylesheet" href="/scss/admin.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="container_header"></div>
+
+        <div class="management">
+
+            <div class="greetings">
+                <h1>Мои транзакции</h1>
+            </div>
+
+            <h5 id="email">baxtzod@gmail.com</h5>
+
+            <a href="/pages/expenses/">
+                <button class="transaction_add_btn">Добавить</button>
+            </a>
+
+        </div>
+
+        <br>
+
+        <div class="container3">
+            <table>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Wallet</td>
+                        <td>Category</td>
+                        <td>Total</td>
+                        <td>Date</td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>

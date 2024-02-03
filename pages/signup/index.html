@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="/pages/signup/training.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+
+    <div class="center">
+
+        <form name="signup" id="registrationForm" onsubmit="return validateRegistration()">
+            <h1>
+                <span>Р</span>
+                <span>е</span>
+                <span>г</span>
+                <span>и</span>
+                <span>с</span>
+                <span>т</span>
+                <span>р</span>
+                <span>а</span>
+                <span>ц</span>
+                <span>и</span>
+                <span>я</span>
+            </h1>
+            
+            <div class="required">
+                <input type="email" placeholder="Почта" class="email" id="email" name="email"> <br>
+                <span class="error-text"></span>
+            </div>
+
+            <div class="required">
+                <input type="text" placeholder="Имя" class="name" id="name" name="name"> <br>
+                <span class="error-text"></span>
+            </div>
+           
+            <div class="required">
+                <input type="text" placeholder="Фамилия" class="surname" id="surname" name="surname"> <br>
+                <span class="error-text"></span>
+            </div>
+
+            <div class="required">
+                <input type="password" placeholder="Пароль" class="password" id="password" name="password"> <br>
+                <span class="error-text"></span>
+            </div>
+            
+            <button class="signup">Продолжить</button> <br>
+            <a href="/pages/signin/" class="signin">Войти на аккаунт</a><br>
+        </form>
+
+    </div>
+
+
+    <script type="module" src="/pages/signup/index.js"></script>
+</body>
+
+</html>
