@@ -1,4 +1,4 @@
-import { createHeader, reload_table, reload_wallets, storedUserData, storedUserEmail } from "./modules/ui";
+import { createHeader, reload_table, reload_wallets } from "./modules/ui";
 
 // headers 
 let container_header = document.querySelector('.container_header')
@@ -8,8 +8,8 @@ let tbody = document.querySelector('.container3 tbody');
 createHeader(container_header)
 reload_wallets([1, 2, 4, 4, 5], cont_two)
 reload_table([1, 2, 4], tbody)
-storedUserData()
-storedUserEmail()
+
+
 
 
 // let storedUserData = JSON.parse(localStorage.getItem('user'));

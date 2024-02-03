@@ -1,20 +1,34 @@
 {
   "users": [
     {
-      "id": "1ba8",
-      "email": "dsarifkulo021@gmail.com",
-      "name": "Daler",
-      "surname": "Daler",
-      "password": "1234Daler"
+      "id": "8bb7",
+      "email": "arabitdinovislom@gmail.com",
+      "name": "Islom",
+      "surname": "Arabitdinov",
+      "password": "2008290150isa"
     },
     {
-      "id": "98c0",
-      "email": "baxtzod@gmail.com",
-      "name": "Baxtzod",
-      "surname": "Rasulov",
-      "password": "baxt2008"
+      "id": "faf8",
+      "email": "arabitdinovislom12@gmail.com",
+      "name": "Islom",
+      "surname": "Arabitdinov",
+      "password": "2008290150isa"
     }
   ],
-  "wallets": [],
+  "wallets": [
+    {
+      "id": "3537",
+      "name": "Islom",
+      "currency": "rub",
+      "balance": "2,000"
+    },
+    {
+      "id": "6229",
+      "user_id": "1ba8",
+      "name": "Axror",
+      "сurrency": "USD",
+      "balance": "1"
+    }
+  ],
   "transactions": []
 }

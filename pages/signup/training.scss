@@ -209,14 +209,14 @@ input[type='password']:hover {
     text-decoration: none;
 }
 
-.error-field input,
+.error-field input, select
 .error-field span {
     color: red !important;
     border-color: red !important;
     box-shadow: 5px 5px 0 red !important;
 }
 
-form .required input {
+form .required input, select {
     position: relative;
     border-color: blue;
 }
