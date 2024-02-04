@@ -29,28 +29,8 @@
       "password": "baxt2008"
     }
   ],
-  "wallets": [
-    {
-      "id": "cfa9",
-      "name": "Visa",
-      "сurrency": "RUB",
-      "balance": "1234"
-    },
-    {
-      "id": "18c9",
-      "name": "Baxtzod",
-      "сurrency": "RUB",
-      "balance": "999 999 999 999"
-    }
-  ],
+  "wallets": [],
   "transactions": [
-    {
-      "id": "022b",
-      "data": "2024-2-4",
-      "from_the_wallet": "",
-      "total": "",
-      "category": ""
-    },
     {
       "id": "245f",
       "data": "2024-2-4",

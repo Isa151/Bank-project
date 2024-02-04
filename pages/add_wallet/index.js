@@ -1,12 +1,11 @@
-import { postData } from "../modules/helpers"
+import { postData } from "../../modules/helpers";
+import { getSymbols } from "/modules/helpers";
 
-// const urlbackend = "http://localhost:9090/users";
-
-// axios.get(urlbackend)
-//     .then((res) => console.log(res.data))
-
-let form = document.forms.login
+const select = document.querySelector('#сurrency')
+const form = document.forms.add_wallet
+const user = JSON.parse(localStorage.getItem('user'))
 let inps = document.querySelectorAll('input')
+
 
 let patterns = {
     name: /^[a-z ,.'-]+$/i,
@@ -26,23 +25,24 @@ inps.forEach(inp => {
     }
 })
 
+
 form.onsubmit = (e) => {
     e.preventDefault();
 
-    let fmm = new FormData(e.target)
+    const fm = new FormData(e.target)
 
-    let wallet = {}
+    const wallet = {
+        user_id: user?.id,
+        created_at: new Date().toLocaleDateString('uz-UZ', { hour12: false }),
+        updated_at: new Date().toLocaleDateString('uz-UZ', { hour12: false })
+    }
 
-    fmm.forEach((val, key) => {
-        wallet[key] = val
-    })
+    fm.forEach((val, key) => wallet[key] = val)
 
     postData('/wallets', wallet)
-        .then(res => {
-            console.log(res);
-        })
+        .then(res => console.log(res))
 
-    let isError = false
+        let isError = false
 
     inps.forEach(inp => {
         let parent = inp.parentElement
@@ -58,27 +58,16 @@ form.onsubmit = (e) => {
     if (isError) {
         alert('Error')
     } else {
-        submit()
+        alert('Correct')
     }
 }
 
-function submit() {
-    let fm = new FormData(form)
+getSymbols()
+    .then(res => {
+        console.log(res);
+        for (let key in res) {
+            let opt = new Option(key + " - " + res[key], key)
 
-    let user = {
-        name: fm.get('name'),
-        сurrency: fm.get('сurrency'),
-        balance: fm.get('balance'),
-        /* select: fm.get('select') */
-    }
-
-    console.log(user);
-
-    // axios.post(urlbackend, user)
-    // .then((res) => {
-    //     console.log(res.data);
-    // })
-    // .catch((error) => {
-    //     console.error(error);
-    // });
-}
+            select.append(opt)
+        }
+    })
