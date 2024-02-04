@@ -20,6 +20,13 @@
       "name": "Baxtzod",
       "surname": "Rasulov",
       "password": "baxt2008"
+    },
+    {
+      "id": "3b33",
+      "email": "baxtzod45@gmail.com",
+      "name": "Baxtzod",
+      "surname": "Rasulov",
+      "password": "baxt2008"
     }
   ],
   "wallets": [
@@ -28,7 +35,28 @@
       "name": "Visa",
       "сurrency": "RUB",
       "balance": "1234"
+    },
+    {
+      "id": "18c9",
+      "name": "Baxtzod",
+      "сurrency": "RUB",
+      "balance": "999 999 999 999"
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "id": "022b",
+      "data": "2024-2-4",
+      "from_the_wallet": "",
+      "total": "",
+      "category": ""
+    },
+    {
+      "id": "245f",
+      "data": "2024-2-4",
+      "from_the_wallet": "Master Card",
+      "total": "1 000 000 000",
+      "category": "Car"
+    }
+  ]
 }

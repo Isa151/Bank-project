@@ -1,5 +1,4 @@
-import { reload_wallets, storedUserEmail } from "../../modules/ui"
-import { createHeader } from "/modules/ui.js"
+import { reload_wallets, createHeader, storedUserEmail } from "/modules/ui"
 
 const container_header = document.querySelector('.container_header')
 let cont_two = document.querySelector('.container2 .center')

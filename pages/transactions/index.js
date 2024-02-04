@@ -1,5 +1,4 @@
-import { reload_table, storedUserData, storedUserEmail } from "../../modules/ui"
-import { createHeader } from "/modules/ui.js"
+import { reload_table, createHeader, storedUserEmail } from "/modules/ui"
 
 const container_header = document.querySelector('.container_header')
 const tbody = document.querySelector('.container3 tbody')

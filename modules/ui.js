@@ -9,8 +9,8 @@ export function createHeader(place) {
     let a_transactions = document.createElement('a')
     let account = document.createElement('div')
     let a_account = document.createElement('a')
-    let a_svg = document.createElement('a')
-    let svg_img = document.createElement('div');
+    /* let a_svg = document.createElement('a')
+    let svg_img = document.createElement('div'); */
 
     // styling
     header.classList.add('header')
@@ -26,8 +26,8 @@ export function createHeader(place) {
     }
 
     a_home.setAttribute('href', '/')
-    a_my_wallets.setAttribute('href', '/pages/wallet/')
-    a_transactions.setAttribute('href', '/pages/transaction/')
+    a_my_wallets.setAttribute('href', '/pages/wallets/')
+    a_transactions.setAttribute('href', '/pages/transactions/')
 
     a_home.innerHTML = 'Главная'
     a_my_wallets.innerHTML = 'Мои кошельки'
@@ -38,16 +38,17 @@ export function createHeader(place) {
     /* let storedUserEmail = JSON.parse(localStorage.getItem('user'));
     a_account.innerHTML = storedUserEmail.email; */
 
-    svg_img.innerHTML = 'Sign in'
+    // svg_img.innerHTML = 'Sign in'
 
+    a_account.setAttribute('href', '#')
     a_account.setAttribute('href', '/pages/signup/')
-    a_svg.setAttribute('href', '/pages/signin/')
+    // a_svg.setAttribute('href', '/pages/signin/') 
     // append
     place.append(header)
     header.append(nav, account)
     nav.append(a_home, a_my_wallets, a_transactions)
-    account.append(a_account, a_svg, svg_img)
-    a_svg.append(svg_img)
+    account.append(a_account) // a_svg, svg_img
+    // a_svg.append(svg_img)
 }
 
 function getGradient() {
