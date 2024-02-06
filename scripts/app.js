@@ -1,6 +1,6 @@
 import {getData, postData} from "../modules/helpers.js";
 
-getData('/wallets').then(r => console.log(r.data))
+getData('/wallets').then(res => console.log(r.data))
 
 let form = document.forms.login
 let inps = document.querySelectorAll('input')
@@ -50,5 +50,5 @@ function submit() {
         balance: fm.get('balance')
     }
 
-    postData('/wallets', newWallet).then(r => console.log(r.data))
+    postData('/wallets', newWallet).then(res => console.log(r.data))
 }

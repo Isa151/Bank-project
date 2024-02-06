@@ -12,9 +12,9 @@ reload_table([1, 2, 4], tbody)
 
 
 
-// let storedUserData = JSON.parse(localStorage.getItem('user'));
-// document.getElementById('name').innerHTML = 'Добро пожаловать, ' + storedUserData.name + ' ' + storedUserData.surname;
+let storedUserData = JSON.parse(localStorage.getItem('user'));
+document.getElementById('name').innerHTML = 'Добро пожаловать, ' + storedUserData.name + ' ' + storedUserData.surname;
 
 
-// let storedUserEmail = JSON.parse(localStorage.getItem('user'));
-// document.getElementById('email').innerHTML = ' ' + storedUserEmail.email;
+let storedUserEmail = JSON.parse(localStorage.getItem('user'));
+document.getElementById('email').innerHTML = ' ' + storedUserEmail.email;
