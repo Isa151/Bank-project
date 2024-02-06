@@ -42,7 +42,7 @@ form.onsubmit = (e) => {
     postData('/wallets', wallet)
         .then(res => console.log(res))
 
-        let isError = false
+    let isError = false
 
     inps.forEach(inp => {
         let parent = inp.parentElement
@@ -58,7 +58,9 @@ form.onsubmit = (e) => {
     if (isError) {
         alert('Error')
     } else {
-        alert('Correct')
+        // alert('Correct')
+        // перенаправить пользователя на страницу /pages/wallets/
+        location.assign('/')
     }
 }
 

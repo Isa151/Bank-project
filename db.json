@@ -29,7 +29,17 @@
       "password": "baxt2008"
     }
   ],
-  "wallets": [],
+  "wallets": [
+    {
+      "id": "ef53",
+      "user_id": "3b33",
+      "created_at": "2024-2-4",
+      "updated_at": "2024-2-4",
+      "name": "Visa Card",
+      "сurrency": "BND",
+      "balance": "450 000 000"
+    }
+  ],
   "transactions": [
     {
       "id": "245f",
