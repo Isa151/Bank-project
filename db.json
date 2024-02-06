@@ -17,17 +17,18 @@
   ],
   "wallets": [
     {
-      "id": "3537",
-      "name": "Islom",
-      "currency": "rub",
-      "balance": "2,000"
+      "id": "caab",
+      "user_id": "faf8",
+      "name": "Visa",
+      "сurrency": "AFN",
+      "balance": "1000"
     },
     {
-      "id": "6229",
-      "user_id": "1ba8",
-      "name": "Axror",
-      "сurrency": "USD",
-      "balance": "1"
+      "id": "cdbf",
+      "user_id": "faf8",
+      "name": "Axora_second",
+      "сurrency": "AOA",
+      "balance": "100"
     }
   ],
   "transactions": []
