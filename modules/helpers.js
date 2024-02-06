@@ -38,7 +38,7 @@ export const getSymbols = async () => {
         if(res.status === 200 || res.status === 201) {
             localStorage.setItem('symbols', JSON.stringify(res.data.symbols))
 
-            return res.data
+            return res.data.symbols
         }
         
     } catch(e) {

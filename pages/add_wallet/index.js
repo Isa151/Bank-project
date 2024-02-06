@@ -17,12 +17,16 @@ form.onsubmit = (e) => {
     fm.forEach((val, key) => wallet[key] = val)
 
     postData('/wallets', wallet)
-        .then(res => console.log(res))
+        .then(res => {
+            if(res.status === 200 || res.status === 201) {
+                alert('Success')
+                location.assign('/pages/wallets/')
+            }
+        })
 }
 
 getSymbols()
     .then(res => {
-        console.log(res);
         for(let key in res) {
             let opt = new Option(key + " - " + res[key], key)
             

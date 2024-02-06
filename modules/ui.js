@@ -62,9 +62,10 @@ export function reload_wallets(arr, place) {
         creditCardDiv.style.background = `linear-gradient(84deg, ${getGradient()} 2.27%, ${getGradient()} 92.26%)`
         creditCardDiv.classList.add(`my_credit_card`);
         firstSpanDiv.classList.add('first_span');
-        firstSpanDiv.innerHTML = 'Visa';
+        firstSpanDiv.innerHTML = item.name;
         secondSpanDiv.classList.add('second_span');
-        secondSpanDiv.innerHTML = 'RUB';
+        secondSpanDiv.innerHTML = item.сurrency;
+
         creditCardDiv.append(firstSpanDiv);
         creditCardDiv.append(secondSpanDiv);
         place.append(creditCardDiv);

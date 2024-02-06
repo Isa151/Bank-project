@@ -1,12 +1,19 @@
+import { getData } from "/modules/helpers"
 import { reload_wallets, createHeader } from "/modules/ui"
 
 const container_header = document.querySelector('.container_header')
 let cont_two = document.querySelector('.container2 .center')
-
+let user = JSON.parse(localStorage.getItem('user')) || null
 
 createHeader(container_header)
-reload_wallets([1, 2, 3, 4, , 5, 6, 7], cont_two)
 
+
+getData('/wallets?user_id=' + user.id)
+    .then(res => {
+        if(res.status === 200 || res.status === 201) {
+            reload_wallets(res.data, cont_two)
+        }
+    })
 
 // let storedUserEmail = JSON.parse(localStorage.getItem('user'));
 // document.getElementById('email').innerHTML = ' ' + storedUserEmail.email;
