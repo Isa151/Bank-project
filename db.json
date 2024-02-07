@@ -1,34 +1,20 @@
 {
   "users": [
     {
-      "id": "8bb7",
-      "email": "arabitdinovislom@gmail.com",
-      "name": "Islom",
-      "surname": "Arabitdinov",
-      "password": "2008290150isa"
-    },
-    {
-      "id": "faf8",
-      "email": "arabitdinovislom12@gmail.com",
-      "name": "Islom",
-      "surname": "Arabitdinov",
-      "password": "2008290150isa"
+      "id": "832a",
+      "email": "axrorshariov@gmail.com",
+      "name": "Axror",
+      "surname": "Sharipov",
+      "password": "123456"
     }
   ],
   "wallets": [
     {
-      "id": "caab",
-      "user_id": "faf8",
+      "id": "1ac7",
+      "user_id": "832a",
       "name": "Visa",
-      "сurrency": "AFN",
-      "balance": "1000"
-    },
-    {
-      "id": "cdbf",
-      "user_id": "faf8",
-      "name": "Axora_second",
-      "сurrency": "AOA",
-      "balance": "100"
+      "сurrency": "AED",
+      "balance": "1024"
     }
   ],
   "transactions": []

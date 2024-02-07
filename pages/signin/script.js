@@ -1,12 +1,14 @@
 import { getData } from "../../modules/helpers";
 
+// export let wallets = []
+
 const form = document.forms.signin;
 let inps = document.querySelectorAll('input')
 
 let patterns = {
     email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
-    password: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/g
-}
+    password: /^[0-9]/
+}   
 
 inps.forEach(inp => {
     let parent = inp.parentElement
@@ -42,6 +44,9 @@ form.onsubmit = (e) => {
     }
 }
 
+
+
+
 function submit() {
     let fm = new FormData(form)
 
@@ -59,10 +64,19 @@ function submit() {
                     localStorage.setItem('user', JSON.stringify(copied_res))
                     location.assign('/')
                 } else {
-                    alert('wrong password!')
+                    alert('Не верный пароль!')
                 }
             } else {
-                alert('No user found!')
+                alert('Пользователь не найден!')
             }
+
+            // getData('/wallets?user_id=' + res.data[0].id)
+            //     .this(res => {
+            //         wallets.push(res.data)
+            //     })
+            
+            
         })
+        
 }
+

@@ -2,18 +2,20 @@ export function createHeader(place) {
     const { pathname } = location
 
     // create
-    let header = document.createElement('header')
+    let header_container = document.createElement('div')
     let nav = document.createElement('nav')
     let a_home = document.createElement('a')
     let a_my_wallets = document.createElement('a')
     let a_transactions = document.createElement('a')
     let account = document.createElement('div')
     let a_account = document.createElement('a')
+    let leave = document.createElement('img')
 
     // styling
-    header.classList.add('header')
+    header_container.classList.add('header_container')
     nav.classList.add('navbar')
     account.classList.add('account')
+    leave.classList.add('leave')
 
     if (pathname === "/") {
         a_home.classList.add('active')
@@ -26,6 +28,7 @@ export function createHeader(place) {
     a_home.setAttribute('href', '/')
     a_my_wallets.setAttribute('href', '/pages/wallets/')
     a_transactions.setAttribute('href', '/pages/transactions/')
+    leave.src = '/public/icons/icon_logout.svg'
 
     a_home.innerHTML = 'Главная'
     a_my_wallets.innerHTML = 'Мои кошельки'
@@ -35,10 +38,17 @@ export function createHeader(place) {
 
     a_account.setAttribute('href', '#')
     // append
-    place.append(header)
-    header.append(nav, account)
+    place.append(header_container)
+    header_container.append(nav, account)
     nav.append(a_home, a_my_wallets, a_transactions)
-    account.append(a_account)
+    account.append(a_account, leave)
+
+    leave.onclick = () => {
+        let isIeave = confirm('Вы точно хотите выйти?')
+        if (isIeave) {
+            location.href = '/pages/signin/'
+        }
+    }
 }
 
 function getGradient() {
@@ -55,6 +65,9 @@ export function reload_wallets(arr, place) {
     place.innerHTML = ''
 
     for (let item of arr) {
+        let glass = document.createElement('div')
+        glass.classList.add('glass')
+
         let creditCardDiv = document.createElement('div');
         let secondSpanDiv = document.createElement('div');
         let firstSpanDiv = document.createElement('div');
@@ -66,8 +79,8 @@ export function reload_wallets(arr, place) {
         secondSpanDiv.classList.add('second_span');
         secondSpanDiv.innerHTML = item.сurrency;
 
-        creditCardDiv.append(firstSpanDiv);
-        creditCardDiv.append(secondSpanDiv);
+        creditCardDiv.append(glass);
+        glass.append(firstSpanDiv,secondSpanDiv);
         place.append(creditCardDiv);
     }
 

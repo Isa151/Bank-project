@@ -1,11 +1,11 @@
 import { getData } from "/modules/helpers"
 import { reload_wallets, createHeader } from "/modules/ui"
 
-const container_header = document.querySelector('.container_header')
+const header = document.querySelector('header')
 let cont_two = document.querySelector('.container2 .center')
 let user = JSON.parse(localStorage.getItem('user')) || null
 
-createHeader(container_header)
+createHeader(header)
 
 
 getData('/wallets?user_id=' + user.id)

@@ -2,46 +2,56 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Space Mono", monospace;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 img {
     max-width: 100%;
 }
 
-.container {
-    max-width: 1920px;
-    margin: 0 auto;
-}
-
-.header {
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
-    padding: 0px 10%;
-    background: #F0F0F0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px 0;
+    background: rgb(240,240,240,0.9);;
+    backdrop-filter: blur(2.3px);
+    box-shadow: 0px 10px 17px -8px rgba(169, 169, 169, 0.58);
+    transition: .5s;
     z-index: 100;
+
+    .header_container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        max-width: 1200px;
+
+        .account {
+            display: flex;
+            gap: 19px;
+            cursor: pointer;
+
+            a {
+                color: #000;
+                text-align: right;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-decoration: none;
+            }
+        }
+    }
 }
 
-.account {
-    display: flex;
-    gap: 19px;
-    cursor: pointer;
-}
-
-.account a {
-    color: #000;
-    text-align: right;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-decoration: none;
+header:hover {
+    padding: 24px 0;
 }
 
 .navbar a {
@@ -52,42 +62,61 @@ img {
     line-height: normal;
     text-decoration: none;
     margin-right: 21px;
-    transition: .5s ease;
+    transition: .3s ease;
 }
 
-.navbar a:hover,
-.navbar a.active {
-    color: #0047FF;
+.navbar a:hover {
+    color: #ff5353;
     text-decoration: underline;
+    font-size: 17px;
+}
+.navbar a.active {
+    color: #ff2525;
+    font-size: 18px;
 }
 
-main {
-    height: 800px;
+
+
+section {
+    width: 100%;
+
+    .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: start;
+
+        height: 800px;
+    }
 }
+
+
+
+
 
 .management {
-    max-width: 1200px;
     margin: 0 auto;
     padding-top: 120px;
-    /* padding: 120px 0 0 160px; */
+
+    h5 {
+        color: #0047FF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    h1 {
+        color: #000;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-bottom: 11px;
+    }
 }
 
-.management h5 {
-    color: #0047FF;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
 
-.greetings h1 {
-    color: #000;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding-bottom: 11px;
-}
 
 .my_wallets h2 {
     color: #000;
@@ -96,31 +125,45 @@ main {
     font-weight: 500;
     line-height: normal;
     /* padding: 47px 0 0 160px; */
-    max-width: 1200px;
+
     margin: 0 auto;
     padding-top: 47px;
+
 }
 
 .center {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
-    /* padding: 21px 160px 0 160px; */
-    max-width: 1200px;
-    margin: 0 auto;
     padding-top: 21px;
 }
 
 .my_credit_card {
+    position: relative;
     width: 282px;
     height: 160px;
     border-radius: 15px;
-    cursor: pointer;
     transition: .5s ease;
+    cursor: pointer;
+
+    box-shadow: -12px -12px 19px -10px rgba(169, 169, 169, 0.9) inset;
 }
 
-.my_credit_card:hover {
-    transform: scale(1.05);
+.glass {
+    width: 282px;
+    height: 160px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    transition: .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: -4%;
+    left: -2%;
+}
+
+.glass:hover {
+    transform: scale(1.01);
 }
 
 
@@ -143,22 +186,15 @@ main {
     padding: 78px 0 17px 23px;
 }
 
-.link_card {
-    display: flex;
-    gap: 21px;
-    /* padding: 21px 0 37px 160px; */
-    padding: 21px 0 37px 0;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.link_card a {
+
+.seeAll {
     color: #0047FF;
     font-size: 16px;
-    font-style: normal;
     font-weight: 600;
     line-height: normal;
     text-decoration-line: underline;
+    cursor: pointer;
 }
 
 .latest_transactions {
@@ -167,31 +203,17 @@ main {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    /* padding: 0 0 32px 160px; */
-    max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 32px;
 }
 
 .all_payments {
-    /* padding: 21px 0 0 160px; */
     padding-top: 21px;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
-.all_payments p {
-    color: #0047FF;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-decoration-line: underline;
-    cursor: pointer;
-}
 
 .container3 {
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -200,7 +222,7 @@ table {
     left: 50%;
     top: 88%;
     transform: translate(-50%, -50%); */
-    width: 1200px;
+    width: 100%;
     height: 150px;
     border-collapse: collapse;
     border-spacing: 0;
@@ -232,12 +254,13 @@ tr {
     border-bottom: 1px solid #B9C0D1;
     transition: all .2s ease-in;
     cursor: pointer;
+    transition: .5s;
 }
 
 tr:hover {
-    background-color: #f5f5f5;
-    transform: scale(1.02);
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    transform: scale(1.01);
+    box-shadow: -1px 3px 18px 0px rgba(169, 169, 169, 0.9);
 }
 
 .center_btn_add {

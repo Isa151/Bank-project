@@ -65,7 +65,7 @@ let patterns = {
     email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
     name: /^[a-z ,.'-]+$/i,
     surname: /^[a-z ,.'-]+$/i,
-    password: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/g
+    password: /^[0-9]/
 }
 
 inps.forEach(inp => {
