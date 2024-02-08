@@ -1,10 +1,5 @@
 import { getData, postData } from "../modules/helpers"
 
-// const urlbackend = "http://localhost:9090/users";
-
-// axios.get(urlbackend)
-//     .then((res) => console.log(res.data))
-
 const select = document.querySelector('#сurrency')
 let form = document.forms.add_transaction
 const user = JSON.parse(localStorage.getItem('user'))
@@ -76,14 +71,14 @@ form.onsubmit = (e) => {
     }
 }
 
-// getData('/wallets')
-//     .then(res => {
-//         for (let key in res) {
-//             let opt = new Option(key + " - " + res[key], key)
+getData('/wallets?user_id=' + user.id)
+    .then(res => {
+        for(let item of res.data) {
+            let opt = new Option(item.name + " - " + item.name, item.name)
 
-//             select.append(opt)
-//         }
-//     })
+            select.append(opt)    
+        }
+    })
 
 // function submit() {
 //     let fm = new FormData(form)
