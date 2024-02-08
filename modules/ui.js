@@ -72,9 +72,9 @@ export function reload_wallets(arr, place) {
         creditCardDiv.style.background = `linear-gradient(84deg, ${getGradient()} 2.27%, ${getGradient()} 92.26%)`
         creditCardDiv.classList.add(`my_credit_card`);
         firstSpanDiv.classList.add('first_span');
-        firstSpanDiv.innerHTML = 'Visa';
+        firstSpanDiv.innerHTML = item.name;
         secondSpanDiv.classList.add('second_span');
-        secondSpanDiv.innerHTML = 'RUB';
+        secondSpanDiv.innerHTML = item.сurrency;
 
         creditCardDiv.append(firstSpanDiv);
         creditCardDiv.append(secondSpanDiv);
@@ -96,11 +96,11 @@ export function reload_table(arr, place) {
         let td5 = document.createElement('td');
 
         // styling
-        td1.innerHTML = '1232312';
-        td2.innerHTML = 'VISA';
-        td3.innerHTML = 'Автомобиль';
-        td4.innerHTML = '414,000,000';
-        td5.innerHTML = '4 дня назад';
+        td1.innerHTML = item.id;
+        td2.innerHTML = item.from_the_wallet;
+        td3.innerHTML = item.category;
+        td4.innerHTML = item.total;
+        td5.innerHTML = item.data;
 
         // append
         place.append(tr);

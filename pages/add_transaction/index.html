@@ -17,10 +17,16 @@
             <div class="column">
                 <h1>Добавить транзакцию</h1>
 
-                <form name="login" id="registrationForm">
+                <form name="add_transaction" id="registrationForm">
                     
                     <div class="required">
-                        <input type="text" placeholder="Из кошелька" name="from_the_wallet" id="from_the_wallet">
+                        <!-- <input type="text" placeholder="Из кошелька" name="from_the_wallet" id="from_the_wallet"> -->
+
+                        <select class="select" name="from_the_wallet" id="сurrency">
+                            <option value="Visa Card">Visa Card</option>
+                            <option value="Master Card">Master Card</option>
+                        </select>
+
                         <span class="error-text"></span>
                     </div>
 

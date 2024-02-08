@@ -1,11 +1,13 @@
-import { postData } from "../modules/helpers"
+import { getData, postData } from "../modules/helpers"
 
 // const urlbackend = "http://localhost:9090/users";
 
 // axios.get(urlbackend)
 //     .then((res) => console.log(res.data))
 
-let form = document.forms.login
+const select = document.querySelector('#сurrency')
+let form = document.forms.add_transaction
+const user = JSON.parse(localStorage.getItem('user'))
 let inps = document.querySelectorAll('input')
 
 let patterns = {
@@ -32,6 +34,8 @@ form.onsubmit = (e) => {
     let fmm = new FormData(e.target)
 
     let transaction = {
+        card_id: String(Math.random()),
+        user_id: user?.id,
         data: new Date().toLocaleDateString('uz-UZ', { hour12: false })
     }
 
@@ -41,8 +45,14 @@ form.onsubmit = (e) => {
 
     postData('/transactions', transaction)
         .then(res => {
-            console.log(res);
+            console.log(res)
         })
+    // .then(res => {
+    //     if (res.status === 200 || res.status === 201) {
+    //         alert('Success')
+    //         location.assign('/pages/transactions/')
+    //     }
+    // })
 
     let isError = false
 
@@ -60,27 +70,38 @@ form.onsubmit = (e) => {
     if (isError) {
         alert('Error')
     } else {
-        submit()
+        // submit()
+        alert('Success')
+        location.assign('/pages/transactions/')
     }
 }
 
-function submit() {
-    let fm = new FormData(form)
+// getData('/wallets')
+//     .then(res => {
+//         for (let key in res) {
+//             let opt = new Option(key + " - " + res[key], key)
 
-    let user = {
-        from_the_wallet: fm.get('from_the_wallet'),
-        category: fm.get('category'),
-        total: fm.get('total'),
-        data: new Date().toLocaleDateString('uz-UZ', { hour12: false })
-    }
+//             select.append(opt)
+//         }
+//     })
 
-    console.log(user);
+// function submit() {
+//     let fm = new FormData(form)
 
-    // axios.post(urlbackend, user)
-    // .then((res) => {
-    //     console.log(res.data);
-    // })
-    // .catch((error) => {
-    //     console.error(error);
-    // });
-}
+//     let user = {
+//         from_the_wallet: fm.get('from_the_wallet'),
+//         category: fm.get('category'),
+//         total: fm.get('total'),
+//         data: new Date().toLocaleDateString('uz-UZ', { hour12: false })
+//     }
+
+//     console.log(user);
+
+//     // axios.post(urlbackend, user)
+//     // .then((res) => {
+//     //     console.log(res.data);
+//     // })
+//     // .catch((error) => {
+//     //     console.error(error);
+//     // });
+// }

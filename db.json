@@ -42,9 +42,11 @@
   ],
   "transactions": [
     {
-      "id": "245f",
-      "data": "2024-2-4",
-      "from_the_wallet": "Master Card",
+      "id": "b38f",
+      "card_id": "0.706945286893754",
+      "user_id": "3b33",
+      "data": "2024-2-8",
+      "from_the_wallet": "Visa Card",
       "total": "1 000 000 000",
       "category": "Car"
     }
