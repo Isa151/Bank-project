@@ -16,20 +16,26 @@
     }
   ],
   "wallets": [
+
+  ],
+  "transactions": [
     {
-      "id": "caab",
-      "user_id": "faf8",
-      "name": "Visa",
-      "сurrency": "AFN",
-      "balance": "1000"
+      "id": "f4d3",
+      "wallettype": "visa",
+      "summary": "2000",
+      "category": "saads"
     },
     {
-      "id": "cdbf",
-      "user_id": "faf8",
-      "name": "Axora_second",
-      "сurrency": "AOA",
-      "balance": "100"
+      "id": "873b",
+      "wallettype": "visa",
+      "summary": "2000",
+      "category": "saads"
+    },
+    {
+      "id": "1e6a",
+      "wallettype": null,
+      "summary": "3000",
+      "category": "Car"
     }
-  ],
-  "transactions": []
+  ]
 }

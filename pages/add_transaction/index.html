@@ -6,6 +6,7 @@
     <title>Add transaction</title>
     <link rel="stylesheet" href="/scss/decorate.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
 </head>
 <body>
 
@@ -17,15 +18,16 @@
             <div class="column">
                 <h1>Добавить транзакцию</h1>
 
-                <form name="login" id="registrationForm">
-                    
+                <form  name="login" id="registrationForm">
+
                     <div class="required">
-                        <input type="text" placeholder="Из кошелька" name="name" id="name">
+                        <select name="wallettype" id="wallettype">
+                        </select>
                         <span class="error-text"></span>
                     </div>
 
                     <div class="required">
-                        <input type="text" placeholder="Сумма" name="password" id="password">
+                        <input type="text" placeholder="Сумма" name="summary" id="summary">
                         <span class="error-text"></span>
                     </div>
 
@@ -47,6 +49,6 @@
 
     </div>
 
-    <script src="/scripts/analytics.js"></script>
+    <script type="module" src="/scripts/analytics.js"></script>
 </body>
 </html>

@@ -1,24 +1,25 @@
-import {getData, postData} from "../modules/helpers.js";
+import {getData, postData} from "/modules/helpers.js";
 
-const urlbackend = "http://localhost:9090/users";
+getData('/transactions').then(r => console.log(r.data))
 
-getData(urlbackend)
-    .then((res) => console.log(res.data))
 
-let form = document.forms.login
+let form = document.forms.registrationForm
 let inps = document.querySelectorAll('input')
 
 let patterns = {
-    name: /^[a-z ,.'-]+$/i,
-    category: /^[a-z ,.'-]+$/i,
-    password: /^[0-9][A-Za-z0-9 -]*$/
+    summary: /^\$?[0-9][0-9,]*[0-9]\.?[0-9]{0,2}$/i,
+    category:/^[a-z ,.'-]+$/i,
 }
+
+
+
+
 
 inps.forEach(inp => {
     let parent = inp.parentElement
 
-    inp.onkeyup = () => {
-        if (patterns[inp.name].test(inp.value)) {
+    inp.onsubmit = () => {
+        if (patterns[inp.summary] || patterns[inps.category].test(inp.value)) {
             parent.classList.remove('error-field')
         } else {
             parent.classList.add('error-field')
@@ -29,6 +30,8 @@ inps.forEach(inp => {
 form.onsubmit = (e) => {
     e.preventDefault();
     let isError = false
+
+
 
     inps.forEach(inp => {
         let parent = inp.parentElement
@@ -41,29 +44,18 @@ form.onsubmit = (e) => {
         }
     })
 
-    if (isError) {
-        alert('Error')
-    } else {
-        submit()
-    }
+    isError ? alert('Error') : submit();
 }
 
 function submit() {
     let fm = new FormData(form)
 
-    let user = {
-        name: fm.get('name'),
-        category: fm.get('category'),
-        password: fm.get('password')
+    let newTransaction = {
+        wallettype: fm.get('wallettype'),
+        summary: fm.get('summary'),
+        category: fm.get('category')
     }
-    
-    console.log(user);
 
-    postData(urlbackend, user)
-    .then((res) => {
-        console.log(res.data);
-    })
-    .catch((error) => {
-        console.error(error);
-    });
+    postData('/transactions', newTransaction).then(r => console.log(r.data))
 }
+
