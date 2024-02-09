@@ -146,20 +146,22 @@ section {
     transition: .5s ease;
     cursor: pointer;
 
-    box-shadow: -12px -12px 19px -10px rgba(169, 169, 169, 0.9) inset;
+    box-shadow: -12px -12px 19px -10px rgba(173, 173, 173, 0.9) inset;
 }
 
 .glass {
     width: 282px;
     height: 160px;
     background: transparent;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     border-radius: 15px;
     transition: .5s ease;
     cursor: pointer;
     position: absolute;
     top: -4%;
     left: -2%;
+    box-shadow: -12px -12px 19px -10px rgba(255, 255, 255, 0.9);
+
 }
 
 .glass:hover {

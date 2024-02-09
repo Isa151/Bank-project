@@ -62,13 +62,15 @@ function getGradient() {
 }
 
 export function reload_wallets(arr, place) {
-    place.innerHTML = ''
+    // place.innerHTML = ''
 
     for (let item of arr) {
         let glass = document.createElement('div')
         glass.classList.add('glass')
 
         let creditCardDiv = document.createElement('div');
+        let front = document.createElement('div');
+        let back = document.createElement('div');
         let secondSpanDiv = document.createElement('div');
         let firstSpanDiv = document.createElement('div');
 
@@ -78,6 +80,8 @@ export function reload_wallets(arr, place) {
         firstSpanDiv.innerHTML = item.name;
         secondSpanDiv.classList.add('second_span');
         secondSpanDiv.innerHTML = item.сurrency;
+        front.classList.add('front')
+        back.classList.add('back')
 
         creditCardDiv.append(glass);
         glass.append(firstSpanDiv,secondSpanDiv);
