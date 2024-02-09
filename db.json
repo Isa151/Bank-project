@@ -16,7 +16,20 @@
     }
   ],
   "wallets": [
-
+    {
+      "id": "b38c",
+      "user_id": "c9a0",
+      "name": "Islom",
+      "сurrency": "AED",
+      "balance": "2,000"
+    },
+    {
+      "id": "b732",
+      "user_id": "c9a0",
+      "name": "Visa",
+      "сurrency": "BHD",
+      "balance": "5555"
+    }
   ],
   "transactions": [
     {
@@ -35,6 +48,13 @@
       "id": "1e6a",
       "wallettype": null,
       "summary": "3000",
+      "category": "Car"
+    },
+    {
+      "id": "343f",
+      "user_id": "c9a0",
+      "wallettype": "Visa",
+      "summary": "2000",
       "category": "Car"
     }
   ]

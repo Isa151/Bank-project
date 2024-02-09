@@ -1,25 +1,32 @@
-import {getData, postData} from "/modules/helpers.js";
+import { getData, postData } from "/modules/helpers"
 
-getData('/transactions').then(r => console.log(r.data))
-
-
+let select = document.querySelector('#wallettype')
 let form = document.forms.registrationForm
+let user = JSON.parse(localStorage.getItem('user'))
 let inps = document.querySelectorAll('input')
 
+
+getData('/wallets?user_id' + user.id)
+    .then(res => {
+        for(let item of res.data) {
+            let opt = new Option(item.name)
+
+            select.append(opt)
+        }
+    })
+
 let patterns = {
-    summary: /^\$?[0-9][0-9,]*[0-9]\.?[0-9]{0,2}$/i,
-    category:/^[a-z ,.'-]+$/i,
+    wallettype: /^[a-z ,.'-]+$/i,
+    category: /^[a-z ,.'-]+$/i,
+    summary: /^[0-9][A-Za-z0-9 -]*$/
 }
-
-
-
 
 
 inps.forEach(inp => {
     let parent = inp.parentElement
 
-    inp.onsubmit = () => {
-        if (patterns[inp.summary] || patterns[inps.category].test(inp.value)) {
+    inp.onkeyup = () => {
+        if (patterns[inp.name].test(inp.value)) {
             parent.classList.remove('error-field')
         } else {
             parent.classList.add('error-field')
@@ -29,9 +36,30 @@ inps.forEach(inp => {
 
 form.onsubmit = (e) => {
     e.preventDefault();
+
+    let fm = new FormData(e.target)
+
+    let transaction = {
+        user_id: user?.id,
+
+    }
+
+    fm.forEach((val, key) => {
+        transaction[key] = val
+    })
+
+    postData('/transactions', transaction)
+        .then(res => {
+            console.log(res)
+        })
+    .then(res => {
+        if (res.status === 200 || res.status === 201) {
+            alert('Success')
+            location.assign('/pages/transactions/')
+        }
+    })
+
     let isError = false
-
-
 
     inps.forEach(inp => {
         let parent = inp.parentElement
@@ -44,18 +72,14 @@ form.onsubmit = (e) => {
         }
     })
 
-    isError ? alert('Error') : submit();
-}
-
-function submit() {
-    let fm = new FormData(form)
-
-    let newTransaction = {
-        wallettype: fm.get('wallettype'),
-        summary: fm.get('summary'),
-        category: fm.get('category')
+    if (isError) {
+        alert('Error')
+    } else {
+        // submit()
+        alert('Success')
+        location.assign('/pages/transactions/')
     }
-
-    postData('/transactions', newTransaction).then(r => console.log(r.data))
 }
+
+
 
