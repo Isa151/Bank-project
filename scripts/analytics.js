@@ -2,7 +2,7 @@ import { getData, postData } from "../modules/helpers"
 
 const select = document.querySelector('#сurrency')
 let form = document.forms.add_transaction
-const user = JSON.parse(localStorage.getItem('user'))
+const user = JSON.parse(localStorage.getItem('user')) || null
 let inps = document.querySelectorAll('input')
 
 let patterns = {
@@ -73,10 +73,10 @@ form.onsubmit = (e) => {
 
 getData('/wallets?user_id=' + user.id)
     .then(res => {
-        for(let item of res.data) {
-            let opt = new Option(item.name + " - " + item.name, item.name)
+        for (let item of res.data) {
+            let opt = new Option(item.name)
 
-            select.append(opt)    
+            select.append(opt)
         }
     })
 
