@@ -1,15 +1,14 @@
-const urlbackend = "http://localhost:9090/users";
+import { getData, postData } from "../modules/helpers"
 
-axios.get(urlbackend)
-    .then((res) => console.log(res.data))
-
-let form = document.forms.login
+const select = document.querySelector('#сurrency')
+let form = document.forms.add_transaction
+const user = JSON.parse(localStorage.getItem('user')) || null
 let inps = document.querySelectorAll('input')
 
 let patterns = {
-    name: /^[a-z ,.'-]+$/i,
+    from_the_wallet: /^[a-z ,.'-]+$/i,
     category: /^[a-z ,.'-]+$/i,
-    password: /^[0-9][A-Za-z0-9 -]*$/
+    total: /^[0-9][A-Za-z0-9 -]*$/
 }
 
 inps.forEach(inp => {
@@ -26,6 +25,25 @@ inps.forEach(inp => {
 
 form.onsubmit = (e) => {
     e.preventDefault();
+
+    let fmm = new FormData(e.target)
+
+    let transaction = {
+        card_id: String(Math.random()),
+        user_id: user?.id,
+        data: new Date().toLocaleDateString('uz-UZ', { hour12: false })
+    }
+
+    fmm.forEach((val, key) => {
+        transaction[key] = val
+    })
+
+    postData('/transactions', transaction)
+        .then(res => {
+            console.log(res)
+        })
+
+
     let isError = false
 
     inps.forEach(inp => {
@@ -42,26 +60,16 @@ form.onsubmit = (e) => {
     if (isError) {
         alert('Error')
     } else {
-        submit()
+        alert('Success')
+        location.assign('/pages/transactions/')
     }
 }
 
-function submit() {
-    let fm = new FormData(form)
+getData('/wallets?user_id=' + user.id)
+    .then(res => {
+        for (let item of res.data) {
+            let opt = new Option(item.name)
 
-    let user = {
-        name: fm.get('name'),
-        category: fm.get('category'),
-        password: fm.get('password')
-    }
-    
-    console.log(user);
-
-    axios.post(urlbackend, user)
-    .then((res) => {
-        console.log(res.data);
+            select.append(opt)
+        }
     })
-    .catch((error) => {
-        console.error(error);
-    });
-}

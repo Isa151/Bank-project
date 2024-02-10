@@ -1,15 +1,28 @@
+import { getData } from "./modules/helpers";
 import { createHeader, reload_table, reload_wallets } from "./modules/ui";
 
 // headers 
 let container_header = document.querySelector('.container_header')
 let cont_two = document.querySelector('.container2 .center')
 let tbody = document.querySelector('.container3 tbody');
+let user = JSON.parse(localStorage.getItem('user')) || null
 
 createHeader(container_header)
-reload_wallets([1, 2, 4, 4, 5], cont_two)
-reload_table([1, 2, 4], tbody)
 
 
+getData('/wallets?user_id=' + user.id)
+    .then(res => {
+        if (res.status === 200 || res.status === 201) {
+            reload_wallets(res.data, cont_two)
+        }
+    })
+
+getData('/transactions?user_id=' + user.id)
+    .then(res => {
+        if (res.status === 200 || res.status === 201) {
+            reload_table(res.data, tbody)
+        }
+    })
 
 
 // let storedUserData = JSON.parse(localStorage.getItem('user'));

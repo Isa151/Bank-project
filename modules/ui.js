@@ -86,11 +86,11 @@ export function reload_table(arr, place) {
         let td5 = document.createElement('td');
 
         // styling
-        td1.innerHTML = '1232312';
-        td2.innerHTML = 'VISA';
-        td3.innerHTML = 'Автомобиль';
-        td4.innerHTML = '414,000,000';
-        td5.innerHTML = '4 дня назад';
+        td1.innerHTML = item.id;
+        td2.innerHTML = item.from_the_wallet;
+        td3.innerHTML = item.category;
+        td4.innerHTML = item.total;
+        td5.innerHTML = item.data;
 
         // append
         place.append(tr);
