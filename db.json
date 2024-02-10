@@ -36,6 +36,20 @@
       "name": "visa",
       "сurrency": "AED",
       "balance": "3223"
+    },
+    {
+      "id": "10ec",
+      "user_id": "0e4d",
+      "name": "visa",
+      "сurrency": "AED",
+      "balance": "3223"
+    },
+    {
+      "id": "6e16",
+      "user_id": "0e4d",
+      "name": "visa",
+      "сurrency": "AED",
+      "balance": "3223"
     }
   ],
   "transactions": []
