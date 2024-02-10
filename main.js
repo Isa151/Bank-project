@@ -4,6 +4,9 @@ import { createHeader, reload_table, reload_wallets } from "./modules/ui";
 let container_header = document.querySelector('.container_header')
 let cont_two = document.querySelector('.container2 .center')
 let tbody = document.querySelector('.container3 tbody');
+let gmail = document.querySelector('.management #email')
+
+gmail.innerHTML = JSON.parse(localStorage.getItem('user')).email;
 
 createHeader(container_header)
 reload_wallets([1, 2, 4, 4, 5], cont_two)

@@ -4,7 +4,9 @@ import { reload_wallets, createHeader } from "/modules/ui"
 const container_header = document.querySelector('.container_header')
 let cont_two = document.querySelector('.container2 .center')
 let user = JSON.parse(localStorage.getItem('user')) || null
+let gmail = document.querySelector('.management #email')
 
+gmail.innerHTML = JSON.parse(localStorage.getItem('user')).email;
 createHeader(container_header)
 
 

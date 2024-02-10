@@ -29,6 +29,13 @@
       "name": "Axora_second",
       "сurrency": "AOA",
       "balance": "100"
+    },
+    {
+      "id": "2eb7",
+      "user_id": "0e4d",
+      "name": "visa",
+      "сurrency": "AED",
+      "balance": "3223"
     }
   ],
   "transactions": []

@@ -25,7 +25,7 @@ a_transactions.setAttribute('href', '/pages/transaction/')
 a_home.innerHTML = 'Главная'
 a_my_wallets.innerHTML = 'Мои кошельки'
 a_transactions.innerHTML = 'Мои транзакции'
-a_account.innerHTML = 'baxtzod@gmail.com'
+a_account.innerHTML =JSON.parse(localStorage.getItem('user')).email;
 
 a_account.setAttribute('href', '#')
 a_svg.setAttribute('href', '/pages/signup/')
