@@ -38,6 +38,33 @@
       "name": "Visa Card",
       "сurrency": "BND",
       "balance": "450 000 000"
+    },
+    {
+      "id": "2967",
+      "user_id": "8bb7",
+      "created_at": "2024-2-10",
+      "updated_at": "2024-2-10",
+      "name": "Visa",
+      "сurrency": "AWG",
+      "balance": "100"
+    },
+    {
+      "id": "da3a",
+      "user_id": "8bb7",
+      "created_at": "2024-2-10",
+      "updated_at": "2024-2-10",
+      "name": "Mastercard",
+      "сurrency": "KWD",
+      "balance": "100"
+    },
+    {
+      "id": "7c0c",
+      "user_id": "8bb7",
+      "created_at": "2024-2-10",
+      "updated_at": "2024-2-10",
+      "name": "UzCard",
+      "сurrency": "UZS",
+      "balance": "100000"
     }
   ],
   "transactions": [

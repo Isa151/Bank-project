@@ -42,12 +42,7 @@ form.onsubmit = (e) => {
         .then(res => {
             console.log(res)
         })
-    // .then(res => {
-    //     if (res.status === 200 || res.status === 201) {
-    //         alert('Success')
-    //         location.assign('/pages/transactions/')
-    //     }
-    // })
+
 
     let isError = false
 
@@ -65,7 +60,6 @@ form.onsubmit = (e) => {
     if (isError) {
         alert('Error')
     } else {
-        // submit()
         alert('Success')
         location.assign('/pages/transactions/')
     }
@@ -79,24 +73,3 @@ getData('/wallets?user_id=' + user.id)
             select.append(opt)
         }
     })
-
-// function submit() {
-//     let fm = new FormData(form)
-
-//     let user = {
-//         from_the_wallet: fm.get('from_the_wallet'),
-//         category: fm.get('category'),
-//         total: fm.get('total'),
-//         data: new Date().toLocaleDateString('uz-UZ', { hour12: false })
-//     }
-
-//     console.log(user);
-
-//     // axios.post(urlbackend, user)
-//     // .then((res) => {
-//     //     console.log(res.data);
-//     // })
-//     // .catch((error) => {
-//     //     console.error(error);
-//     // });
-// }
