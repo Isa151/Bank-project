@@ -50,6 +50,13 @@
       "name": "visa",
       "сurrency": "AED",
       "balance": "3223"
+    },
+    {
+      "id": "9e2d",
+      "user_id": "8bb7",
+      "name": "Visa",
+      "сurrency": "AWG",
+      "balance": "100"
     }
   ],
   "transactions": []
