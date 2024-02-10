@@ -1,6 +1,6 @@
 let user = localStorage.getItem('user')
 
 
-if (!user) {
+if(!user) {
     location.assign('/pages/signin/')
 }

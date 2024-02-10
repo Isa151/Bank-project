@@ -1,81 +1,42 @@
 {
   "users": [
     {
-      "id": "1ba8",
-      "email": "dsarifkulo021@gmail.com",
-      "name": "Daler",
-      "surname": "Daler",
-      "password": "1234Daler"
+      "id": "8bb7",
+      "email": "arabitdinovislom@gmail.com",
+      "name": "Islom",
+      "surname": "Arabitdinov",
+      "password": "2008290150isa"
     },
     {
-      "id": "98c0",
-      "email": "baxtzod@gmail.com",
-      "name": "Baxtzod",
-      "surname": "Rasulov",
-      "password": "baxt2008"
-    },
-    {
-      "id": "4109",
-      "email": "baxtzod10@gmail.com",
-      "name": "Baxtzod",
-      "surname": "Rasulov",
-      "password": "baxt2008"
-    },
-    {
-      "id": "3b33",
-      "email": "baxtzod45@gmail.com",
-      "name": "Baxtzod",
-      "surname": "Rasulov",
-      "password": "baxt2008"
+      "id": "faf8",
+      "email": "arabitdinovislom12@gmail.com",
+      "name": "Islom",
+      "surname": "Arabitdinov",
+      "password": "2008290150isa"
     }
   ],
   "wallets": [
     {
-      "id": "ef53",
-      "user_id": "3b33",
-      "created_at": "2024-2-4",
-      "updated_at": "2024-2-4",
-      "name": "Visa Card",
-      "сurrency": "BND",
-      "balance": "450 000 000"
-    },
-    {
-      "id": "2967",
-      "user_id": "8bb7",
-      "created_at": "2024-2-10",
-      "updated_at": "2024-2-10",
+      "id": "caab",
+      "user_id": "faf8",
       "name": "Visa",
-      "сurrency": "AWG",
+      "сurrency": "AFN",
+      "balance": "1000"
+    },
+    {
+      "id": "cdbf",
+      "user_id": "faf8",
+      "name": "Axora_second",
+      "сurrency": "AOA",
       "balance": "100"
     },
     {
-      "id": "da3a",
+      "id": "427f",
       "user_id": "8bb7",
-      "created_at": "2024-2-10",
-      "updated_at": "2024-2-10",
-      "name": "Mastercard",
-      "сurrency": "KWD",
+      "name": "Visa",
+      "сurrency": "AED",
       "balance": "100"
-    },
-    {
-      "id": "7c0c",
-      "user_id": "8bb7",
-      "created_at": "2024-2-10",
-      "updated_at": "2024-2-10",
-      "name": "UzCard",
-      "сurrency": "UZS",
-      "balance": "100000"
     }
   ],
-  "transactions": [
-    {
-      "id": "b38f",
-      "card_id": "0.706945286893754",
-      "user_id": "3b33",
-      "data": "2024-2-8",
-      "from_the_wallet": "Visa Card",
-      "total": "1 000 000 000",
-      "category": "Car"
-    }
-  ]
+  "transactions": []
 }

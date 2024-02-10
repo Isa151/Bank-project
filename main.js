@@ -1,5 +1,5 @@
 import { getData } from "./modules/helpers";
-import { createHeader, reload_table, reload_wallets, storedUserData, storedUserEmail } from "./modules/ui";
+import { createHeader, reload_table, reload_wallets } from "./modules/ui";
 
 // headers 
 let container_header = document.querySelector('.container_header')
@@ -8,8 +8,7 @@ let tbody = document.querySelector('.container3 tbody');
 let user = JSON.parse(localStorage.getItem('user')) || null
 
 createHeader(container_header)
-storedUserData()
-storedUserEmail()
+
 
 getData('/wallets?user_id=' + user.id)
     .then(res => {
