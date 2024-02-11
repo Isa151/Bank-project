@@ -24,7 +24,7 @@ export const postData = async (resourse, body) => {
 export const getSymbols = async () => {
     const symbs = localStorage.getItem('symbols')
 
-    if (symbs) {
+    if(symbs) {
         return JSON.parse(symbs)
     }
 
@@ -35,12 +35,12 @@ export const getSymbols = async () => {
             }
         })
 
-        if (res.status === 200 || res.status === 201) {
+        if(res.status === 200 || res.status === 201) {
             localStorage.setItem('symbols', JSON.stringify(res.data.symbols))
 
             return res.data.symbols
         }
-
+        
     } catch(e) {
         alert('Network error')
     }

@@ -9,8 +9,6 @@ export function createHeader(place) {
     let a_transactions = document.createElement('a')
     let account = document.createElement('div')
     let a_account = document.createElement('a')
-    /* let a_svg = document.createElement('a')
-    let svg_img = document.createElement('div'); */
 
     // styling
     header.classList.add('header')
@@ -33,22 +31,14 @@ export function createHeader(place) {
     a_my_wallets.innerHTML = 'Мои кошельки'
     a_transactions.innerHTML = 'Мои транзакции'
 
-    /* a_account.innerHTML = 'Sign up' */
     a_account.innerHTML = JSON.parse(localStorage.getItem('user')).email;
-    /* let storedUserEmail = JSON.parse(localStorage.getItem('user'));
-    a_account.innerHTML = storedUserEmail.email; */
-
-    // svg_img.innerHTML = 'Sign in'
 
     a_account.setAttribute('href', '#')
-    a_account.setAttribute('href', '/pages/signup/')
-    // a_svg.setAttribute('href', '/pages/signin/') 
     // append
     place.append(header)
     header.append(nav, account)
     nav.append(a_home, a_my_wallets, a_transactions)
-    account.append(a_account) // a_svg, svg_img
-    // a_svg.append(svg_img)
+    account.append(a_account)
 }
 
 function getGradient() {
@@ -106,14 +96,4 @@ export function reload_table(arr, place) {
         place.append(tr);
         tr.append(td1, td2, td3, td4, td5);
     }
-}
-
-export function storedUserData() {
-    let storedUserData = JSON.parse(localStorage.getItem('user'));
-    document.getElementById('name').innerHTML = 'Добро пожаловать, ' + storedUserData.name + ' ' + storedUserData.surname;
-}
-
-export function storedUserEmail() {
-    let storedUserEmail = JSON.parse(localStorage.getItem('user'));
-    document.getElementById('email').innerHTML = ' ' + storedUserEmail.email;
 }

@@ -51,7 +51,7 @@ form {
     gap: 8px;
 }
 
-input[type='text'] {
+input[type='text'], select {
     width: 438px;
     height: 56px;
     border-radius: 10px;
@@ -75,7 +75,7 @@ input[type='text']:hover {
     box-shadow: 5px 5px 0 rgb(51, 51, 255);
 }
 
-input[type='number'] {
+input[type='number'], select {
     width: 438px;
     height: 56px;
     border-radius: 10px;
@@ -91,7 +91,7 @@ input[type='number'] {
     transition: .5s ease-in;
 }
 
-input[type='number']:hover {
+input[type='number']:hover  {
     transform: scale(1.05);
     transition: .5s ease;
     font-size: 20px;
@@ -165,14 +165,14 @@ input[type='number']:hover {
     transition: .5s ease;
 }
 
-.error-field input,
+.error-field input, select
 .error-field span {
     color: red !important;
     border-color: red !important;
     box-shadow: 5px 5px 0 red !important;
 }
 
-form .required input {
+form .required input, form .required select  {
     position: relative;
     border-color: blue;
 }
