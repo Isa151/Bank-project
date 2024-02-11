@@ -97,3 +97,5 @@ export function reload_table(arr, place) {
         tr.append(td1, td2, td3, td4, td5);
     }
 }
+
+    

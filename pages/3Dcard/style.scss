@@ -1,70 +1,318 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
-
-*,
-*::before,
-*::after {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: Roboto
 }
 
-body {
-  font-family: "Poppins", sans-serif;
+
+.container{
+   max-width: 1920px;
+   margin: 200px   auto;
 }
 
-.flex-container {
-  height: 100vh;
+
+.box{
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
-  padding: 3em 1em;
-
-  .flex-item {
-    margin: 25px;
-    border-radius: 7px;
-    padding: 4.5em 5em;
-    position: relative;
-    font-weight: 600;
-    a {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      text-align: center;
-      color: #fff;
-
-      font-size: 24px;
-      line-height: 1.5;
-      transition: 600ms ease;
-
-      span {
-        transform: translateZ(50px) scale(0.7);
-      }
-    }
-  }
+  background:     rgba(46, 208, 110, 1) 49%,;
+  height: 980px;
+  border-radius: 70px;
+  justify-content: space-between;
+  
+}
+.left{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  height: 590px;
+  margin-left: 40px;
+  margin-top: 120px;
+}
+.right{
+  width: 1391px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 980px;
+  border-radius: 74px;
+  background:  rgba(37, 54, 85, 1) 49%;
 }
 
-.tilt {
-  border-radius: 5px;
-  box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.4);
-  transform-style: preserve-3d;
-
-  transform: perspective(500px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
-  &:hover {
-    box-shadow: 0 40px 70px -15px rgba(0, 0, 0, 0.5);
-  }
+.order{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.order p {
+  font-size: 24px;
+  font-weight: 600;
 }
 
-.bg-one {
-  background: linear-gradient(45deg, rgb(255, 25, 75), rgb(130, 21, 240));
+select{
+  width: 60px;
+  height: 32px;
+  border-radius: 9px;
+  border: 2px solid black;
+  background: rgb(70, 112, 190) 49% ;
 }
 
-.bg-two {
-  background: linear-gradient(45deg, rgb(255, 95, 75), rgb(130, 21, 100));
+
+.prices{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  margin-left: 160px;
+  height: 431px;
+}
+
+.price{
+  width: 345px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+}
+.price p {
+  font-size: 24px;
+  font-weight: 400;
+}
+.dots{
+  width: 144px;
+  border-bottom: dotted ;
+  margin-top: 7px;
+}
+
+.dots2{
+  width: 104px;
+  border-bottom: dotted ;
+  margin-top: 7px;
+}
+.dots3{
+  width: 144px;
+  border-bottom: dotted ;
+  margin-top: 7px;
+}
+.dots4{
+  width: 135px;
+  border-bottom: dotted ;
+  margin-top: 7px;
+}
+
+.line{
+  width: 220px;
+  margin-right: 125px;
+  background: #000;
+   height: 1px;
+}
+
+.lorem{
+  font-size: 14px;
+  font-weight: 400;
+  color: #565656;
+  margin-right: 50px;
+}
+
+
+
+.inputs{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.iden{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+input{
+  padding-left: 10px;
+  outline: none;
+}
+
+
+.iden input{
+  width: 400px;
+  height: 53px;
+  border: none;
+  border-radius: 11px;
+}
+
+.bottom input {
+  width: 180px;
+  height: 53px;
+  border: none;
+  border-radius: 11px;
+  
+}
+
+.bottom{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.pay{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.checkbox{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 110px;
+}
+
+.checkbox input{
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+}
+
+.lorem2 {
+  width: 190px;
+  height: 100px;
+  
+}
+
+.pay_now{
+   width: 180px;
+   height: 53px;
+   border: none;
+   border-radius: 11px;
+   margin-bottom: 40px;
+   font-size: 14px;
+   font-weight: 700;
+}
+
+
+.pay p {
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+ background: rgb(46, 208, 110);
+ background: linear-gradient(
+                 129deg,
+                 rgba(46, 208, 110, 1) 49%,
+                 rgba(37, 54, 85, 1) 49%
+ );
+ color: white;
+}
+
+.quote {
+ margin-top: 1rem;
+ font-style: italic;
+}
+
+
+
+.card {
+ position: relative;
+ width: 600px;
+ height: 400px;
+ margin-top: 140px;
+ border-radius: 40px;
+ border-top: 1px solid rgba(255, 255, 255, 1);
+ border-left: 1px solid rgba(255, 255, 255, 1);
+ box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+.card:before {
+ content: "";
+ position: absolute;
+ top: -10%;
+ left: -10%;
+ width: 600px;
+ height: 400px;
+}
+.chip {
+ position: absolute;
+ top: 36%;
+ left: 6%;
+ width: 80px;
+ height: 80px;
+ background-image: url("https://img.icons8.com/plasticine/2x/sim-card-chip.png");
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+.logo {
+ position: absolute;
+ top: 14%;
+ right: 8%;
+ font-size: 1.4rem;
+ font-weight: 500;
+ letter-spacing: 1px;
+}
+
+.name {
+ position: absolute;
+ top: 80%;
+ left: 8%;
+ font-weight: 300;
+ font-size: 1.2rem;
+ background: -webkit-linear-gradient(
+                 rgb(255, 255, 255, 0.9),
+                 rgba(255, 255, 255, 0.2)
+ );
+ -webkit-background-clip: text;
+ text-transform: uppercase;
+}
+
+.number {
+ position: absolute;
+ top: 65%;
+ left: 8%;
+ font-size: 1.6rem;
+ font-weight: 300;
+ -webkit-background-clip: text;
+ font-family: "Roboto Mono", monospace;
 }

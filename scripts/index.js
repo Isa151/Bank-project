@@ -100,6 +100,8 @@ for (let i = 1; i <= 4; i++) {
     centerDiv.append(creditCardDiv);
 }
 
+
+
 cont2.append(centerDiv);
 
 
