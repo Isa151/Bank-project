@@ -19,6 +19,15 @@ export const postData = async (resourse, body) => {
         alert(`${error.message}`)
     }
 }
+export const patchData = async (resourse, body) => {
+    try {
+        const res = await axios.patch(BASE_URL + resourse, body)
+    
+        return res
+    } catch(error) {
+        alert(`${error.message}`)
+    }
+}
 
 export const getSymbols = async () => {
     const symbs = localStorage.getItem('symbols')

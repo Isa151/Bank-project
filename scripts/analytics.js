@@ -1,26 +1,16 @@
-import { getData, postData } from "/modules/helpers"
+import { getData, patchData, postData } from "../modules/helpers"
 
-let select = document.querySelector('#wallettype')
-let form = document.forms.registrationForm
-let user = JSON.parse(localStorage.getItem('user'))
+const select = document.querySelector('#сurrency')
+const user = JSON.parse(localStorage.getItem('user')) || null
+let form = document.forms.add_transaction
 let inps = document.querySelectorAll('input')
-
-
-getData('/wallets?user_id' + user.id)
-    .then(res => {
-        for(let item of res.data) {
-            let opt = new Option(item.name)
-
-            select.append(opt)
-        }
-    })
+let wallets = []
 
 let patterns = {
-    wallettype: /^[a-z ,.'-]+$/i,
+    from_the_wallet: /^[a-z ,.'-]+$/i,
     category: /^[a-z ,.'-]+$/i,
-    summary: /^[0-9][A-Za-z0-9 -]*$/
+    total: /^[0-9][A-Za-z0-9 -]*$/
 }
-
 
 inps.forEach(inp => {
     let parent = inp.parentElement
@@ -37,26 +27,16 @@ inps.forEach(inp => {
 form.onsubmit = (e) => {
     e.preventDefault();
 
-    let fm = new FormData(e.target)
+    let fmm = new FormData(e.target)
 
     let transaction = {
         user_id: user?.id,
-
+        created_at: new Date().toLocaleDateString('uz-UZ', { hour12: false }),
+        updated_at: new Date().toLocaleDateString('uz-UZ', { hour12: false })
     }
 
-    fm.forEach((val, key) => {
+    fmm.forEach((val, key) => {
         transaction[key] = val
-    })
-
-    postData('/transactions', transaction)
-        .then(res => {
-            console.log(res)
-        })
-    .then(res => {
-        if (res.status === 200 || res.status === 201) {
-            alert('Success')
-            location.assign('/pages/transactions/')
-        }
     })
 
     let isError = false
@@ -75,11 +55,43 @@ form.onsubmit = (e) => {
     if (isError) {
         alert('Error')
     } else {
-        // submit()
-        alert('Success')
-        location.assign('/pages/transactions/')
+        let findedWallet = wallets.find(wallet => wallet.id === transaction.wallet)
+        delete findedWallet.user_id
+
+        transaction.wallet = findedWallet
+
+        patchData('/wallets/' + findedWallet.id, {
+            balance: findedWallet.balance - transaction.total
+        })
+            .then(res => {
+                if(res.status === 200 || res.status === 201) {
+                    postData('/transactions', transaction)
+                        .then(res => {
+                            if(res.status === 200 || res.status === 201) {
+                                alert('succes')
+                                location.assign('/pages/transactions/')
+                            }
+                        })
+                }
+            })
+            
+
+
+        // alert('Success')
+        // location.assign('/pages/transactions/')
     }
 }
 
 
 
+
+
+getData('/wallets?user_id=' + user.id)
+    .then(res => {
+        wallets = res.data
+        for (let item of res.data) {
+            let opt = new Option(item.name, item.id)
+
+            select.append(opt)
+        }
+    })
