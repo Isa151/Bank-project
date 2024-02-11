@@ -1,9 +1,10 @@
-import { getData, postData } from "../modules/helpers"
+import { getData, patchData, postData } from "../modules/helpers"
 
 const select = document.querySelector('#сurrency')
 let form = document.forms.add_transaction
 const user = JSON.parse(localStorage.getItem('user')) || null
 let inps = document.querySelectorAll('input')
+let wallets = []
 
 let patterns = {
     from_the_wallet: /^[a-z ,.'-]+$/i,
@@ -29,20 +30,15 @@ form.onsubmit = (e) => {
     let fmm = new FormData(e.target)
 
     let transaction = {
-        card_id: String(Math.random()),
+        // card_id: String(Math.random()),
         user_id: user?.id,
-        data: new Date().toLocaleDateString('uz-UZ', { hour12: false })
+        created_at: new Date().toLocaleDateString('uz-UZ', { hour12: false }),
+        updated_at: new Date().toLocaleDateString('uz-UZ', { hour12: false })
     }
 
     fmm.forEach((val, key) => {
         transaction[key] = val
     })
-
-    postData('/transactions', transaction)
-        .then(res => {
-            console.log(res)
-        })
-
 
     let isError = false
 
@@ -60,15 +56,36 @@ form.onsubmit = (e) => {
     if (isError) {
         alert('Error')
     } else {
-        alert('Success')
-        location.assign('/pages/transactions/')
+        let findedWallet = wallets.find(wallet => wallet.id === transaction.wallet)
+        delete findedWallet.user_id
+        
+        transaction.wallet = findedWallet
+
+        patchData('/wallets/' + findedWallet.id, {
+            balance: findedWallet.balance - transaction.total
+        })
+            .then(res => {
+                if (res.status === 200 || res.status === 201) {
+                    postData('/transactions', transaction)
+                        .then(res => {
+                            if (res.status === 200 || res.status === 201) {
+                                alert('Success')
+                                location.assign('/pages/transactions/')
+                            }
+                        })
+                }
+            })
+
+        // alert('Success')
+        // location.assign('/pages/transactions/')
     }
 }
 
 getData('/wallets?user_id=' + user.id)
     .then(res => {
+        wallets = res.data
         for (let item of res.data) {
-            let opt = new Option(item.name)
+            let opt = new Option(item.name, item.id)
 
             select.append(opt)
         }

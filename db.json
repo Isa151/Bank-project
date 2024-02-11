@@ -31,69 +31,48 @@
   ],
   "wallets": [
     {
-      "id": "9c94",
+      "id": "c9dc",
       "user_id": "3b33",
-      "created_at": "2024-2-11",
-      "updated_at": "2024-2-11",
-      "name": "Baxtzod",
-      "сurrency": "AED",
-      "balance": "999 999 999 999"
-    },
-    {
-      "id": "c342",
-      "user_id": "3b33",
-      "created_at": "2024-2-11",
-      "updated_at": "2024-2-11",
-      "name": "Baxtzod",
-      "сurrency": "AED",
-      "balance": "999 999 999 999"
-    },
-    {
-      "id": "72e6",
-      "user_id": "3b33",
-      "created_at": "2024-2-11",
-      "updated_at": "2024-2-11",
-      "name": "Baxtzod",
-      "сurrency": "AED",
-      "balance": "999 999 999 999"
-    },
-    {
-      "id": "9f7d",
-      "user_id": "3b33",
-      "created_at": "2024-2-11",
-      "updated_at": "2024-2-11",
-      "name": "Baxtzod Rasulov",
-      "сurrency": "BND",
-      "balance": "945465464654"
-    },
-    {
-      "id": "0897",
-      "user_id": "3b33",
-      "created_at": "2024-2-11",
-      "updated_at": "2024-2-11",
       "name": "Master Card",
       "сurrency": "AED",
-      "balance": "45"
+      "balance": 50
+    },
+    {
+      "id": "617d",
+      "user_id": "3b33",
+      "name": "Tinkoff",
+      "сurrency": "BND",
+      "balance": 200
     }
   ],
   "transactions": [
     {
-      "id": "b38f",
-      "card_id": "0.706945286893754",
+      "id": "ea99",
       "user_id": "3b33",
-      "data": "2024-2-8",
-      "from_the_wallet": "Visa Card",
-      "total": "1 000 000 000",
+      "created_at": "2024-2-11",
+      "updated_at": "2024-2-11",
+      "wallet": {
+        "id": "c9dc",
+        "name": "Master Card",
+        "сurrency": "AED",
+        "balance": "100"
+      },
+      "total": "50",
       "category": "Car"
     },
     {
-      "id": "80cb",
-      "card_id": "0.34044482366612927",
+      "id": "5a45",
       "user_id": "3b33",
-      "data": "2024-2-11",
-      "from_the_wallet": "Master Card",
-      "total": "1 000 000 000",
-      "category": "MasterCard"
+      "created_at": "2024-2-11",
+      "updated_at": "2024-2-11",
+      "wallet": {
+        "id": "617d",
+        "name": "Tinkoff",
+        "сurrency": "BND",
+        "balance": "300"
+      },
+      "total": "100",
+      "category": "Food"
     }
   ]
 }

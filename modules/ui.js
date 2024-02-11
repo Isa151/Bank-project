@@ -88,10 +88,10 @@ export function reload_table(arr, place) {
 
         // styling
         td1.innerHTML = item.id;
-        td2.innerHTML = item.from_the_wallet;
+        td2.innerHTML = item.wallet.name;
         td3.innerHTML = item.category;
-        td4.innerHTML = item.total;
-        td5.innerHTML = item.data;
+        td4.innerHTML = `${item.total} ${item.wallet.сurrency}`;
+        td5.innerHTML = item.created_at;
 
         // append
         place.append(tr);
