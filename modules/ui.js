@@ -34,6 +34,7 @@ export function createHeader(place) {
     a_account.innerHTML = JSON.parse(localStorage.getItem('user')).email;
 
     a_account.setAttribute('href', '#')
+    a_account.setAttribute('href', '/pages/signup/')
     // append
     place.append(header)
     header.append(nav, account)
@@ -96,4 +97,14 @@ export function reload_table(arr, place) {
         place.append(tr);
         tr.append(td1, td2, td3, td4, td5);
     }
+}
+
+export function storedUserData() {
+    let storedUserData = JSON.parse(localStorage.getItem('user'));
+    document.getElementById('name').innerHTML = `Добро пожаловать, ` + storedUserData.name + ' ' + storedUserData.surname;
+}
+
+export function storedUserEmail() {
+    let storedUserEmail = JSON.parse(localStorage.getItem('user'));
+    document.getElementById('email').innerHTML = ' ' + storedUserEmail.email;
 }

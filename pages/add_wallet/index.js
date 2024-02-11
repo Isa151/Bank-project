@@ -12,6 +12,8 @@ form.onsubmit = (e) => {
     
     const wallet = {
         user_id: user?.id,
+        created_at: new Date().toLocaleDateString('uz-UZ', {hour12: false}),
+        updated_at: new Date().toLocaleDateString('uz-UZ', {hour12: false}),
     }
 
     fm.forEach((val, key) => wallet[key] = val)
