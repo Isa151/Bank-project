@@ -36,6 +36,13 @@
       "name": "Visa",
       "сurrency": "AED",
       "balance": 80
+    },
+    {
+      "id": "b9c5",
+      "user_id": "0e4d",
+      "name": "visa",
+      "сurrency": "AED",
+      "balance": 23
     }
   ],
   "transactions": [
@@ -51,6 +58,34 @@
         "balance": 100
       },
       "total": "20",
+      "category": "car"
+    },
+    {
+      "id": "5d6c",
+      "user_id": "0e4d",
+      "created_at": "12/02/2024",
+      "updated_at": "12/02/2024",
+      "wallet": {
+        "id": "b9c5",
+        "name": "visa",
+        "сurrency": "AED",
+        "balance": "3223"
+      },
+      "total": "200",
+      "category": "rub"
+    },
+    {
+      "id": "6c70",
+      "user_id": "0e4d",
+      "created_at": "12/02/2024",
+      "updated_at": "12/02/2024",
+      "wallet": {
+        "id": "b9c5",
+        "name": "visa",
+        "сurrency": "AED",
+        "balance": 3023
+      },
+      "total": "3000",
       "category": "car"
     }
   ]

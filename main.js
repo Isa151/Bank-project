@@ -30,14 +30,6 @@ getData('/transactions?user_id=' + user.id)
         }
     })
 
-getData('/wallets?user_id=' + user.id)
-    .then(res => {
-        if (res.status === 200 || res.status === 201) {
-            reload_wallets(res.data, cont_two)
-            console.log(res);
-        }
-    })
-
 // let storedUserData = JSON.parse(localStorage.getItem('user'));
 // document.getElementById('name').innerHTML = 'Добро пожаловать, ' + storedUserData.name + ' ' + storedUserData.surname;
 

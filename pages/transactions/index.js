@@ -4,8 +4,9 @@ import { reload_table, createHeader } from "/modules/ui"
 const container_header = document.querySelector('.container_header')
 const tbody = document.querySelector('.container3 tbody')
 let user = JSON.parse(localStorage.getItem('user')) || null
+let gmail = document.querySelector('.management #email')
 
-gmail.innerHTML = JSON.parse(localStorage.getItem('user')).email;
+gmail.innerHTML = user.email;
 createHeader(container_header)
 
 getData('/transactions?user_id=' + user.id)
