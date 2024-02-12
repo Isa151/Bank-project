@@ -12,9 +12,10 @@ let container_header = document.querySelector('.container_header')
 let cont_two = document.querySelector('.container2 .center')
 let tbody = document.querySelector('.container3 tbody');
 let user = JSON.parse(localStorage.getItem('user')) || null
-
+let name = document.querySelector('#name span')
 createHeader(container_header)
 
+name.innerHTML = `${user.name + ` ` + user.surname}`
 
 getData('/wallets?user_id=' + user.id)
     .then(res => {
