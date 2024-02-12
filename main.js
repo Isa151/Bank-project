@@ -11,12 +11,24 @@ import {
 let container_header = document.querySelector('.container_header')
 let cont_two = document.querySelector('.container2 .center')
 let tbody = document.querySelector('.container3 tbody');
-let gmail = document.querySelector('.management #email')
 let user = JSON.parse(localStorage.getItem('user')) || null
 
-gmail.innerHTML = user.email;
-
 createHeader(container_header)
+
+
+getData('/wallets?user_id=' + user.id)
+    .then(res => {
+        if (res.status === 200 || res.status === 201) {
+            reload_wallets(res.data, cont_two)
+        }
+    })
+
+getData('/transactions?user_id=' + user.id)
+    .then(res => {
+        if (res.status === 200 || res.status === 201) {
+            reload_table(res.data, tbody)
+        }
+    })
 
 getData('/wallets?user_id=' + user.id)
     .then(res => {

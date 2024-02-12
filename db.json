@@ -31,33 +31,27 @@
       "balance": "100"
     },
     {
-      "id": "2eb7",
-      "user_id": "0e4d",
-      "name": "visa",
-      "сurrency": "AED",
-      "balance": "3223"
-    },
-    {
-      "id": "10ec",
-      "user_id": "0e4d",
-      "name": "visa",
-      "сurrency": "AED",
-      "balance": "3223"
-    },
-    {
-      "id": "6e16",
-      "user_id": "0e4d",
-      "name": "visa",
-      "сurrency": "AED",
-      "balance": "3223"
-    },
-    {
-      "id": "9e2d",
+      "id": "427f",
       "user_id": "8bb7",
       "name": "Visa",
-      "сurrency": "AWG",
-      "balance": "100"
+      "сurrency": "AED",
+      "balance": 80
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "id": "5443",
+      "user_id": "8bb7",
+      "created_at": "2024-2-10",
+      "updated_at": "2024-2-10",
+      "wallet": {
+        "id": "427f",
+        "name": "Visa",
+        "сurrency": "AED",
+        "balance": 100
+      },
+      "total": "20",
+      "category": "car"
+    }
+  ]
 }

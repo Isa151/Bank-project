@@ -40,6 +40,8 @@ img {
 
 .column {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -93,6 +95,29 @@ input[type='number']:hover  {
     transform: scale(1.05);
     transition: .5s ease;
     font-size: 20px;
+    border: 2px solid rgb(51, 51, 255);
+    box-shadow: 5px 5px 0 rgb(51, 51, 255);
+}
+
+.select {
+    width: 438px;
+    height: 56px;
+    border-radius: 10px;
+    border: 1px solid #0047FF;
+    background: #FFF;
+    padding-left: 25px;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    outline: none;
+    transition: .5s ease-in;
+}
+
+.select:hover {
+    transform: scale(1.05);
+    transition: .5s ease;
     border: 2px solid rgb(51, 51, 255);
     box-shadow: 5px 5px 0 rgb(51, 51, 255);
 }

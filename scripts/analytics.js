@@ -1,15 +1,15 @@
-const urlbackend = "http://localhost:9090/users";
+import { getData, patchData, postData } from "../modules/helpers"
 
-axios.get(urlbackend)
-    .then((res) => console.log(res.data))
-
-let form = document.forms.login
+const select = document.querySelector('#сurrency')
+const user = JSON.parse(localStorage.getItem('user')) || null
+let form = document.forms.add_transaction
 let inps = document.querySelectorAll('input')
+let wallets = []
 
 let patterns = {
-    name: /^[a-z ,.'-]+$/i,
+    from_the_wallet: /^[a-z ,.'-]+$/i,
     category: /^[a-z ,.'-]+$/i,
-    password: /^[0-9][A-Za-z0-9 -]*$/
+    total: /^[0-9][A-Za-z0-9 -]*$/
 }
 
 inps.forEach(inp => {
@@ -26,6 +26,19 @@ inps.forEach(inp => {
 
 form.onsubmit = (e) => {
     e.preventDefault();
+
+    let fmm = new FormData(e.target)
+
+    let transaction = {
+        user_id: user?.id,
+        created_at: new Date().toLocaleDateString('uz-UZ', { hour12: false }),
+        updated_at: new Date().toLocaleDateString('uz-UZ', { hour12: false })
+    }
+
+    fmm.forEach((val, key) => {
+        transaction[key] = val
+    })
+
     let isError = false
 
     inps.forEach(inp => {
@@ -42,26 +55,43 @@ form.onsubmit = (e) => {
     if (isError) {
         alert('Error')
     } else {
-        submit()
+        let findedWallet = wallets.find(wallet => wallet.id === transaction.wallet)
+        delete findedWallet.user_id
+
+        transaction.wallet = findedWallet
+
+        patchData('/wallets/' + findedWallet.id, {
+            balance: findedWallet.balance - transaction.total
+        })
+            .then(res => {
+                if(res.status === 200 || res.status === 201) {
+                    postData('/transactions', transaction)
+                        .then(res => {
+                            if(res.status === 200 || res.status === 201) {
+                                alert('succes')
+                                location.assign('/pages/transactions/')
+                            }
+                        })
+                }
+            })
+            
+
+
+        // alert('Success')
+        // location.assign('/pages/transactions/')
     }
 }
 
-function submit() {
-    let fm = new FormData(form)
 
-    let user = {
-        name: fm.get('name'),
-        category: fm.get('category'),
-        password: fm.get('password')
-    }
-    
-    console.log(user);
 
-    axios.post(urlbackend, user)
-    .then((res) => {
-        console.log(res.data);
+
+
+getData('/wallets?user_id=' + user.id)
+    .then(res => {
+        wallets = res.data
+        for (let item of res.data) {
+            let opt = new Option(item.name, item.id)
+
+            select.append(opt)
+        }
     })
-    .catch((error) => {
-        console.error(error);
-    });
-}
