@@ -6,6 +6,14 @@
     <title>Virtual Credit Card</title>
     <link rel="stylesheet" href="/pages/card/style.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        #currencies {
+            width: 230px;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     
@@ -38,13 +46,16 @@
                     <!-- <h4>Item ................. $12</h4> -->
 
                     <div class="line"></div>
+                    <select id="currencies">
+                        <option value="not-selected">not-selected</option>
+                    </select>
 
-                    <h3 class="h3_text">Sub Total ................ $137</h3>
-                    <h3 class="h3_text_second">Tax(6%) ................ $8.22</h3>
+                    <h3 class="h3_text" id="from" >С валюты ........ </h3>
+                    <h3 class="h3_text_second" id="to" >На ................ </h3>
 
                     <div class="line"></div>
 
-                    <h3 class="h3_text_second">Total ................ $145.22</h3>
+                    <h3 class="h3_text_second" id="total" >Total ................ $145.22</h3>
 
                     <div class="line"></div>
 

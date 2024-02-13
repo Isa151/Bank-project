@@ -1,16 +1,55 @@
-import { getData } from "../../modules/helpers";
+import axios from "axios";
+import { getData, getSymbols } from "../../modules/helpers";
 
 const user_id = location.search.split('=').at(-1)
 const item_name = document.getElementById('item_name')
 const item_currency = document.getElementById('item_currency')
 const item_balance = document.getElementById('item_balance')
+const select_currecny = document.getElementById('currencies')
+const from_view = document.querySelector('#from')
+const to_view = document.querySelector('#to')
+const total_view = document.querySelector('#total')
+let wallet = null
 
 getData('/wallets/' + user_id)
     .then(res => {
         item_name.innerHTML = `Card Name: ${res.data.name}`
         item_currency.innerHTML = `Currency: ${res.data.сurrency}`
-        item_balance.innerHTML = `Balance: ${res.data.balance}`
+        item_balance.innerHTML = `Balance: ${Number(res.data.balance).toLocaleString('uz-UZ')}`
+        wallet = res.data
     })
+
+getSymbols()    
+    .then(res => {
+        for(let key in res) {
+            let opt = new Option(`${key} - ${res[key]}`, key)
+
+            select_currecny.append(opt)
+        }
+    })
+
+
+select_currecny.onchange = (e) => {
+    let curr = e.target.value
+
+
+    if(curr === "") return
+
+    axios.get(`https://api.apilayer.com/fixer/convert?to=${curr}&from=${wallet.сurrency}&amount=${wallet.balance}`, {
+        headers: {
+            apikey: import.meta.env.VITE_API_KEY
+        }
+    })
+    .then(res => {
+        if(res.status === 200 || res.status === 201) {
+            from_view.innerHTML = `С валюты ........ ${wallet.сurrency}`
+            to_view.innerHTML = `На ................ ${curr}`
+            total_view.innerHTML = res.data.result.toLocaleString('uz-UZ')
+        }
+    })
+
+}
+
  
 let save = document.querySelector('.card-number-box')
 
