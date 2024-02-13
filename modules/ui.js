@@ -53,15 +53,17 @@ function getGradient() {
 
 export function reload_wallets(arr, place) {
     place.innerHTML = ''
-
+     place.ondblclick = () => {
+        location.assign(`/pages/3Dcard/`)
+     }
     for (let item of arr) {
         let creditCardDiv = document.createElement('div');
-        let secondSpanDiv = document.createElement('div');
+          let secondSpanDiv = document.createElement('div');
         let firstSpanDiv = document.createElement('div');
 
         creditCardDiv.style.background = `linear-gradient(84deg, ${getGradient()} 2.27%, ${getGradient()} 92.26%)`
-        creditCardDiv.classList.add(`my_credit_card`);
         firstSpanDiv.classList.add('first_span');
+        creditCardDiv.classList.add(`my_credit_card`);
         firstSpanDiv.innerHTML = item.name;
         secondSpanDiv.classList.add('second_span');
         secondSpanDiv.innerHTML = item.сurrency;
@@ -69,6 +71,7 @@ export function reload_wallets(arr, place) {
         creditCardDiv.append(firstSpanDiv);
         creditCardDiv.append(secondSpanDiv);
         place.append(creditCardDiv);
+        
     }
 
 }

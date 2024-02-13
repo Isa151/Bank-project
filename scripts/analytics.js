@@ -68,7 +68,7 @@ form.onsubmit = (e) => {
                     postData('/transactions', transaction)
                         .then(res => {
                             if(res.status === 200 || res.status === 201) {
-                                alert('succes')
+                                alert('succses')
                                 location.assign('/pages/transactions/')
                             }
                         })

@@ -20,3 +20,6 @@ document.getElementById('email').innerHTML = ' ' + storedUserEmail.email;
 
 
 
+cont_two.ondblclick = () => {
+    location.assign('/pages/3Dcard/')
+}
