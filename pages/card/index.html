@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3d_card</title>
-    <link rel="stylesheet" href="./index.css">
+    <title>Virtual Credit Card</title>
+    <link rel="stylesheet" href="/pages/card/style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
-    <div class="cont">
+    
 
-        <div class="check">
+    <div class="first_container">
+
+        <div class="credit_card_container">
 
             <div class="bottom"></div>
             <div class="circle"></div>
 
-            <div class="title">
+            <div class="big_texts">
 
                 <div class="score">
                     <h4>Order No:</h4>
@@ -27,7 +30,7 @@
                     </select>
                 </div>
 
-                <div class="expenses">
+                <div class="item_and_total">
 
                     <h4>Item ................. $12</h4>
                     <h4>Item ................. $12</h4>
@@ -53,11 +56,11 @@
 
         </div>
 
-        <div class="block">
+        <div class="big_block">
             
             <div class="container">
 
-                <div class="card-cont">
+                <div class="card-container">
         
                     <div class="front">
         
@@ -178,13 +181,83 @@
         </div>
 
     </div>
-        
-        <div class="block"></div>
-    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
         integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
-        <script src="./script.js"></script>
+
+    <script>
+        
+        let save = document.querySelector('.card-number-box')
+
+        save.innerHTML = localStorage.getItem('cardNumber')
+
+        document.querySelector('.card-number-input').oninput = () => {
+            let cardNumber = document.querySelector('.card-number-input').value;
+            document.querySelector('.card-number-box').innerHTML = cardNumber;
+            localStorage.setItem('cardNumber', cardNumber);
+        }
+
+        let second_save = document.querySelector('.card-holder-name')
+
+        second_save.innerHTML = localStorage.getItem('cardNumber2')
+
+        document.querySelector('.card-holder-input').oninput = () => {
+            let cardNumber2 = document.querySelector('.card-holder-input').value;
+            document.querySelector('.card-holder-name').innerHTML = cardNumber2;
+            localStorage.setItem('cardNumber2', cardNumber2);
+        }
+
+        let thrid_save = document.querySelector('.exp-month')
+
+        thrid_save.innerHTML = localStorage.getItem('cardNumber3')
+
+        document.querySelector('.month-input').oninput = () => {
+            let cardNumber3 = document.querySelector('.month-input').value;
+            document.querySelector('.exp-month').innerHTML = cardNumber3;
+            localStorage.setItem('cardNumber3', cardNumber3);
+        }
+
+        let fourth_save = document.querySelector('.exp-year')
+
+        fourth_save.innerHTML = localStorage.getItem('cardNumber4')
+
+        document.querySelector('.year-input').oninput = () => {
+            let cardNumber4 = document.querySelector('.year-input').value;
+            document.querySelector('.exp-year').innerHTML = cardNumber4;
+            localStorage.setItem('cardNumber4', cardNumber4);
+        }
+
+        document.querySelector('.cvv-input').onmouseenter = () => {
+            document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+            document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+        }
+
+        document.querySelector('.cvv-input').onmouseleave = () => {
+            document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+            document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+        }
+
+        fifth_save = document.querySelector('.cvv-box')
+
+        fifth_save.innerHTML = localStorage.getItem('cardNumber5')
+
+        document.querySelector('.cvv-input').oninput = () => {
+            let cardNumber5 = document.querySelector('.cvv-input').value;
+            document.querySelector('.cvv-box').innerHTML = cardNumber5;
+            localStorage.setItem('cardNumber5', cardNumber5);
+        }
+
+        VanillaTilt.init(document.querySelector(".front"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+
+    </script>
+
+    
 </body>
 </html>

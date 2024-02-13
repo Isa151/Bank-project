@@ -50,6 +50,13 @@
       "name": "visa",
       "сurrency": "AED",
       "balance": 23
+    },
+    {
+      "id": "105d",
+      "user_id": "844d",
+      "name": "visa",
+      "сurrency": "AED",
+      "balance": "3223"
     }
   ],
   "transactions": [
