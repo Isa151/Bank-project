@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3d_card</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="/3d_card/index.css">
 </head>
 <body>
     <div class="cont">
@@ -30,18 +30,18 @@
                 <div class="expenses">
 
                     <h4>Item ................. $12</h4>
-                    <h4>Item ................. $12</h4>
-                    <h4>Item ................. $12</h4>
-                    <h4>Item ................. $12</h4>
+                    <h4>Item ................. $50</h4>
+                    <h4>Item ................. $25</h4>
+                    <h4>Item ................. $50</h4>
 
                     <div class="line"></div>
 
-                    <h3 class="h3_text">Sub Total ................ $137</h3>
-                    <h3 class="h3_text_second">Tax(6%) ................ $8.22</h3>
+                    <h3>Sub Total ................ $137</h3>
+                    <h3>Tax(6%) ................ $8.22</h3>
 
                     <div class="line"></div>
 
-                    <h3 class="h3_text_second">Total ................ $145.22</h3>
+                    <h3>Total ................ $145.22</h3>
 
                     <div class="line"></div>
 
@@ -61,25 +61,25 @@
         
                     <div class="front">
         
-                        <div class="image">
-                            <img src="/images/visa_card_icon.png" alt="">
-                            <div class="p_text">Visa Card</div>
-                            <img class="imgad" src="/images/chip.png" alt="">
+                        <div class="img">
+                            <img src="" alt="">
+                            <div class="master">Master Card</div>
+                            <img class="image" src="" alt="">
                         </div>
         
-                        <div class="card-number-box">###################</div>
+                        <div class="card-number"></div>
                         <div class="flexbox">
                             <div class="box">
                                 <span>Cardholder Name</span>
-                                <div class="card-holder-name">full name</div>
+                                <div class="card-holder">full name</div>
                             </div>
         
                             <div class="box">
         
                                 <span>Expiration</span>
-                                <div class="expiration">
-                                    <span class="exp-month">mm</span>
-                                    <span class="exp-year">yy</span>
+                                <div class="exp">
+                                    <span class="month">06 mm</span>
+                                    <span class="year">22 yy</span>
                                 </div>
         
                             </div>
@@ -90,12 +90,12 @@
         
                     <div class="back">
         
-                        <div class="stripe"></div>
+                        <div class="str"></div>
         
                         <div class="box">
                             <span>Cvv</span>
-                            <div class="cvv-box"></div>
-                            <img src="/images/visa_card_icon.png" alt="">
+                            <div class="cvv"></div>
+                            <img src="" alt="">
                         </div>
         
                     </div>
@@ -104,18 +104,18 @@
         
                 <form action="">
 
-                    <div class="inputBox">
-                        <input type="text" maxlength="19" class="card-holder-input" placeholder="Cardholder Name">
+                    <div class="input_Box">
+                        <input type="text" class="card-holder-inp" placeholder="Cardholder Name">
                     </div>
 
-                    <div class="inputBox">
-                        <input type="text" maxlength="19" class="card-number-input" placeholder="Card Number">
+                    <div class="input_Box">
+                        <input type="text" maxlength="19" class="card-number-inp" placeholder="Card Number">
                     </div>
                     
                     <div class="flexbox">
-                        <div class="inputBox">
+                        <div class="input_Box">
         
-                            <select name="" id="" class="month-input">
+                            <select name="" id="" class="month_inp">
                                 <option value="month" selected disabled>Expiration date</option>
                                 <option value="01">01</option>
                                 <option value="02">02</option>
@@ -133,9 +133,9 @@
         
                         </div>
         
-                        <div class="inputBox">
+                        <div class="input_Box">
         
-                            <select name="" id="" class="year-input">
+                            <select name="" id="" class="year_inp">
                                 <option value="year" selected disabled>Security Code</option>
                                 <option value="2024">2024</option>
                                 <option value="2025">2025</option>
@@ -144,17 +144,12 @@
                                 <option value="2028">2028</option>
                                 <option value="2029">2029</option>
                                 <option value="2030">2030</option>
-                                <option value="2031">2031</option>
-                                <option value="2032">2032</option>
-                                <option value="2033">2033</option>
-                                <option value="2034">2034</option>
-                                <option value="2035">2035</option>
                             </select>
         
                         </div>
         
-                        <div class="inputBox">
-                            <input type="text" maxlength="4" class="cvv-input">
+                        <div class="input_Box">
+                            <input type="text" class="cvv-input">
                         </div>
         
                     </div>
@@ -178,13 +173,5 @@
         </div>
 
     </div>
-        
-        <div class="block"></div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
-        integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-        </script>
-        <script src="./script.js"></script>
 </body>
 </html>
