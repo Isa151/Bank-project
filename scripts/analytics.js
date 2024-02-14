@@ -1,8 +1,8 @@
 import { getData, patchData, postData } from "../modules/helpers"
 
 const select = document.querySelector('#сurrency')
-let form = document.forms.add_transaction
 const user = JSON.parse(localStorage.getItem('user')) || null
+let form = document.forms.add_transaction
 let inps = document.querySelectorAll('input')
 let wallets = []
 
@@ -30,7 +30,6 @@ form.onsubmit = (e) => {
     let fmm = new FormData(e.target)
 
     let transaction = {
-        // card_id: String(Math.random()),
         user_id: user?.id,
         created_at: new Date().toLocaleDateString('uz-UZ', { hour12: false }),
         updated_at: new Date().toLocaleDateString('uz-UZ', { hour12: false })
@@ -75,11 +74,17 @@ form.onsubmit = (e) => {
                         })
                 }
             })
+            
+
 
         // alert('Success')
         // location.assign('/pages/transactions/')
     }
 }
+
+
+
+
 
 getData('/wallets?user_id=' + user.id)
     .then(res => {
