@@ -6,14 +6,6 @@
     <title>Virtual Credit Card</title>
     <link rel="stylesheet" href="/pages/card/style.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <style>
-        #currencies {
-            width: 230px;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     
@@ -31,31 +23,31 @@
                     <h4>Order No:</h4>
                     <span>#35264555</span>
                     <select>
-                        <option value="USD">USD</option>
-                        <option value="UZS">UZS</option>
+                        <option id="first_currencies" value="USD">USD</option>
+                        <!-- <option value="UZS">UZS</option>
                         <option value="RUB">RUB</option>
-                        <option value="EURO">EURO</option>
+                        <option value="EURO">EURO</option> -->
                     </select>
                 </div>
 
                 <div class="item_and_total">
 
-                    <h4 id="item_name">Item ................. $12</h4>
-                    <h4 id="item_currency">Item ................. $12</h4>
-                    <h4 id="item_balance">Item ................. $12</h4>
+                    <h4 id="item_name">Loading...</h4>
+                    <h4 id="item_currency">Loading...</h4>
+                    <h4 id="item_balance">Loading...</h4>
                     <!-- <h4>Item ................. $12</h4> -->
 
                     <div class="line"></div>
                     <select id="currencies">
-                        <option value="not-selected">not-selected</option>
+                        <option value="not-selected">Not-Selected</option>
                     </select>
 
-                    <h3 class="h3_text" id="from" >С валюты ........ </h3>
-                    <h3 class="h3_text_second" id="to" >На ................ </h3>
+                    <h3 class="h3_text" id="from" >Loading...</h3>
+                    <h3 class="h3_text_second" id="to" >Loading...</h3>
 
                     <div class="line"></div>
 
-                    <h3 class="h3_text_second" id="total" >Total ................ $145.22</h3>
+                    <h3 class="h3_text_second" id="total">Loading...</h3>
 
                     <div class="line"></div>
 
@@ -76,8 +68,8 @@
                     <div class="front">
         
                         <div class="image">
-                            <img src="/images/visa_card_icon.png" alt="">
-                            <div class="p_text">Visa Card</div>
+                            <!-- <img src="/images/visa_card_icon.png" alt=""> -->
+                            <div class="p_text" id="cards">Visa Card</div>
                             <img class="imgad" src="/images/chip.png" alt="">
                         </div>
         
@@ -109,7 +101,7 @@
                         <div class="box">
                             <span>Cvv</span>
                             <div class="cvv-box"></div>
-                            <img src="/images/visa_card_icon.png" alt="">
+                            <!-- <img src="/images/visa_card_icon.png" alt=""> -->
                         </div>
         
                     </div>

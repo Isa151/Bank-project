@@ -9,6 +9,8 @@ const select_currecny = document.getElementById('currencies')
 const from_view = document.querySelector('#from')
 const to_view = document.querySelector('#to')
 const total_view = document.querySelector('#total')
+const first_currecny = document.querySelector('#first_currencies')
+const credit_cart = document.querySelector('#cards')
 let wallet = null
 
 getData('/wallets/' + user_id)
@@ -16,6 +18,8 @@ getData('/wallets/' + user_id)
         item_name.innerHTML = `Card Name: ${res.data.name}`
         item_currency.innerHTML = `Currency: ${res.data.сurrency}`
         item_balance.innerHTML = `Balance: ${Number(res.data.balance).toLocaleString('uz-UZ')}`
+        first_currecny.innerHTML =`${res.data.сurrency}`
+        credit_cart.innerHTML = `${res.data.name}`
         wallet = res.data
     })
 
