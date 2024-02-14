@@ -65,4 +65,7 @@ export const getSymbols = async () => {
 }
 
 
+ц
+
+
 

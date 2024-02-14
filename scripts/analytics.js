@@ -77,8 +77,8 @@ form.onsubmit = (e) => {
             
 
 
-        // alert('Success')
-        // location.assign('/pages/transactions/')
+         alert('Success')
+        location.assign('/pages/transactions/')
     }
 }
 
