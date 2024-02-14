@@ -15,5 +15,11 @@ getData('/wallets?user_id=' + user.id)
         }
     })
 
-// let storedUserEmail = JSON.parse(localStorage.getItem('user'));
-// document.getElementById('email').innerHTML = ' ' + storedUserEmail.email;
+let storedUserEmail = JSON.parse(localStorage.getItem('user'));
+document.getElementById('email').innerHTML = ' ' + storedUserEmail.email;
+
+
+
+cont_two.ondblclick = () => {
+    location.assign('/pages/3Dcard/')
+}

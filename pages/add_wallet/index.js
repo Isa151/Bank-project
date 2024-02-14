@@ -1,5 +1,5 @@
-import { postData } from "../../modules/helpers";
-import { getSymbols } from "/modules/helpers";
+import { postData, getSymbols } from "/modules/helpers";
+
 
 const select = document.querySelector('#сurrency')
 const form = document.forms.add_wallet

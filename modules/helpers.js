@@ -10,7 +10,6 @@ export const getData = async (resourse) => {
         alert(`${error.message}`)
     }
 }
-
 export const postData = async (resourse, body) => {
     try {
         const res = await axios.post(BASE_URL + resourse, body)
@@ -54,3 +53,6 @@ export const getSymbols = async () => {
         alert('Network error')
     }
 }
+
+
+
