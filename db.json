@@ -57,6 +57,13 @@
       "name": "Uz Card",
       "сurrency": "UZS",
       "balance": 18500
+    },
+    {
+      "id": "e974",
+      "user_id": "3b33",
+      "name": "Humo Card",
+      "сurrency": "RUB",
+      "balance": 20000
     }
   ],
   "transactions": [
@@ -115,6 +122,20 @@
       },
       "total": "1500",
       "category": "House and Cars"
+    },
+    {
+      "id": "4081",
+      "user_id": "3b33",
+      "created_at": "2024-2-15",
+      "updated_at": "2024-2-15",
+      "wallet": {
+        "id": "e974",
+        "name": "Humo Card",
+        "сurrency": "RUB",
+        "balance": "25000"
+      },
+      "total": "5000",
+      "category": "Watches"
     }
   ]
 }

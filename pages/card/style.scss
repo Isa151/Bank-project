@@ -358,3 +358,29 @@ body {
     border-radius: 12px;
     margin-top: 20px;
 }
+
+.chart_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 50px 0 50px 0;
+}
+
+.container_chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart {
+    padding: 32px;
+    border: 3px solid #f49131;
+    border-radius: 16px;
+    background: #251c35;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+}
