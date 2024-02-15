@@ -66,7 +66,7 @@ export function reload_wallets(arr, place) {
         creditCardDiv.classList.add(`my_credit_card`);
         firstSpanDiv.innerHTML = item.name;
         secondSpanDiv.classList.add('second_span');
-        secondSpanDiv.innerHTML = item.сurrency;
+        secondSpanDiv.innerHTML = item.currency;
 
         creditCardDiv.append(firstSpanDiv);
         creditCardDiv.append(secondSpanDiv);

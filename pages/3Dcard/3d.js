@@ -1,8 +1,7 @@
 import vanillaTilt from "https://cdn.skypack.dev/vanilla-tilt@1.7.0";
-import { getData } from "/modules/helpers"
+import { getData, getSymbols} from "/modules/helpers"
 
-import axios from "axios";
-import { getData, getSymbols } from "../../modules/helpers";
+
 
 const user_id = location.search.split('=').at(-1)
 const item_name = document.getElementById('name')
