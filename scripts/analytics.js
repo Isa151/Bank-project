@@ -58,17 +58,19 @@ form.onsubmit = (e) => {
         let findedWallet = wallets.find(wallet => wallet.id === transaction.wallet)
         delete findedWallet.user_id
 
+        
         transaction.wallet = findedWallet
+        transaction.wallet_id = findedWallet.id
 
         patchData('/wallets/' + findedWallet.id, {
             balance: findedWallet.balance - transaction.total
         })
             .then(res => {
-                if(res.status === 200 || res.status === 201) {
+                if (res.status === 200 || res.status === 201) {
                     postData('/transactions', transaction)
                         .then(res => {
-                            if(res.status === 200 || res.status === 201) {
-                                alert('succes')
+                            if (res.status === 200 || res.status === 201) {
+                                alert('Success')
                                 location.assign('/pages/transactions/')
                             }
                         })
