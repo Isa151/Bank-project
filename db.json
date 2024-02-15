@@ -84,7 +84,7 @@
       "user_id": "1ba8",
       "name": "VISA",
       "сurrency": "AED",
-      "balance": "100"
+      "balance": 30
     }
   ],
   "transactions": [
@@ -207,6 +207,36 @@
       "total": "120000",
       "category": "shop",
       "wallet_id": "7a74"
+    },
+    {
+      "id": "1450",
+      "user_id": "1ba8",
+      "created_at": "2024-2-15",
+      "updated_at": "2024-2-15",
+      "wallet": {
+        "id": "d0be",
+        "name": "VISA",
+        "сurrency": "AED",
+        "balance": "100"
+      },
+      "total": "50",
+      "category": "food",
+      "wallet_id": "d0be"
+    },
+    {
+      "id": "3845",
+      "user_id": "1ba8",
+      "created_at": "2024-2-15",
+      "updated_at": "2024-2-15",
+      "wallet": {
+        "id": "d0be",
+        "name": "VISA",
+        "сurrency": "AED",
+        "balance": 50
+      },
+      "total": "20",
+      "category": "car",
+      "wallet_id": "d0be"
     }
   ]
 }
