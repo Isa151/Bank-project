@@ -57,8 +57,10 @@ form.onsubmit = (e) => {
     } else {
         let findedWallet = wallets.find(wallet => wallet.id === transaction.wallet)
         delete findedWallet.user_id
+
         
         transaction.wallet = findedWallet
+        transaction.wallet_id = findedWallet.id
 
         patchData('/wallets/' + findedWallet.id, {
             balance: findedWallet.balance - transaction.total

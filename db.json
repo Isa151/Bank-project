@@ -64,78 +64,142 @@
       "name": "Humo Card",
       "сurrency": "RUB",
       "balance": 20000
+    },
+    {
+      "id": "b096",
+      "user_id": "464e",
+      "name": "Baxt",
+      "сurrency": "USD",
+      "balance": 0
+    },
+    {
+      "id": "7a74",
+      "user_id": "464e",
+      "name": "Visa",
+      "сurrency": "UZS",
+      "balance": 280000
     }
   ],
   "transactions": [
     {
-      "id": "ea99",
-      "user_id": "3b33",
-      "created_at": "2024-2-11",
-      "updated_at": "2024-2-11",
-      "wallet": {
-        "id": "c9dc",
-        "name": "Master Card",
-        "сurrency": "AED",
-        "balance": "100"
-      },
-      "total": "50",
-      "category": "Car"
-    },
-    {
-      "id": "5a45",
-      "user_id": "3b33",
-      "created_at": "2024-2-11",
-      "updated_at": "2024-2-11",
-      "wallet": {
-        "id": "617d",
-        "name": "Tinkoff",
-        "сurrency": "BND",
-        "balance": "300"
-      },
-      "total": "100",
-      "category": "Food"
-    },
-    {
-      "id": "74bc",
-      "user_id": "3b33",
-      "created_at": "2024-2-12",
-      "updated_at": "2024-2-12",
-      "wallet": {
-        "id": "c789",
-        "name": "Visa Card",
-        "сurrency": "UZS",
-        "balance": "500"
-      },
-      "total": "490",
-      "category": "Cake"
-    },
-    {
-      "id": "d058",
-      "user_id": "3b33",
-      "created_at": "2024-2-12",
-      "updated_at": "2024-2-12",
-      "wallet": {
-        "id": "8e78",
-        "name": "Uz Card",
-        "сurrency": "UZS",
-        "balance": "20000"
-      },
-      "total": "1500",
-      "category": "House and Cars"
-    },
-    {
-      "id": "4081",
-      "user_id": "3b33",
+      "id": "22b7",
+      "user_id": "464e",
       "created_at": "2024-2-15",
       "updated_at": "2024-2-15",
       "wallet": {
-        "id": "e974",
-        "name": "Humo Card",
-        "сurrency": "RUB",
-        "balance": "25000"
+        "id": "b096",
+        "name": "Baxt",
+        "сurrency": "USD",
+        "balance": "100"
       },
-      "total": "5000",
-      "category": "Watches"
+      "total": "30",
+      "category": "car",
+      "wallet_id": "b096"
+    },
+    {
+      "id": "faf1",
+      "user_id": "464e",
+      "created_at": "2024-2-15",
+      "updated_at": "2024-2-15",
+      "wallet": {
+        "id": "b096",
+        "name": "Baxt",
+        "сurrency": "USD",
+        "balance": 70
+      },
+      "total": "20",
+      "category": "Car",
+      "wallet_id": "b096"
+    },
+    {
+      "id": "b750",
+      "user_id": "464e",
+      "created_at": "2024-2-15",
+      "updated_at": "2024-2-15",
+      "wallet": {
+        "id": "b096",
+        "name": "Baxt",
+        "сurrency": "USD",
+        "balance": 50
+      },
+      "total": "14",
+      "category": "food",
+      "wallet_id": "b096"
+    },
+    {
+      "id": "be12",
+      "user_id": "464e",
+      "created_at": "2024-2-15",
+      "updated_at": "2024-2-15",
+      "wallet": {
+        "id": "b096",
+        "name": "Baxt",
+        "сurrency": "USD",
+        "balance": 36
+      },
+      "total": "16",
+      "category": "food",
+      "wallet_id": "b096"
+    },
+    {
+      "id": "c288",
+      "user_id": "464e",
+      "created_at": "2024-2-15",
+      "updated_at": "2024-2-15",
+      "wallet": {
+        "id": "b096",
+        "name": "Baxt",
+        "сurrency": "USD",
+        "balance": 20
+      },
+      "total": "20",
+      "category": "home",
+      "wallet_id": "b096"
+    },
+    {
+      "id": "5d77",
+      "user_id": "464e",
+      "created_at": "2024-2-15",
+      "updated_at": "2024-2-15",
+      "wallet": {
+        "id": "7a74",
+        "name": "Visa",
+        "сurrency": "UZS",
+        "balance": "1000000"
+      },
+      "total": "200000",
+      "category": "food",
+      "wallet_id": "7a74"
+    },
+    {
+      "id": "504d",
+      "user_id": "464e",
+      "created_at": "2024-2-15",
+      "updated_at": "2024-2-15",
+      "wallet": {
+        "id": "7a74",
+        "name": "Visa",
+        "сurrency": "UZS",
+        "balance": 800000
+      },
+      "total": "400000",
+      "category": "home",
+      "wallet_id": "7a74"
+    },
+    {
+      "id": "39ca",
+      "user_id": "464e",
+      "created_at": "2024-2-15",
+      "updated_at": "2024-2-15",
+      "wallet": {
+        "id": "7a74",
+        "name": "Visa",
+        "сurrency": "UZS",
+        "balance": 400000
+      },
+      "total": "120000",
+      "category": "shop",
+      "wallet_id": "7a74"
     }
   ]
 }

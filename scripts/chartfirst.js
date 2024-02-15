@@ -1,17 +1,31 @@
 import { getData } from "../modules/helpers";
 
 const ctx = document.getElementById('myChart');
-const user_id = location.search.split('=').at(-1)
+const walletID = location.search.split('=').at(-1)
 
-getData('/wallets/' + user_id)
-    .then(res => {
+getData('/transactions/?wallet_id=' + walletID)
+    .then((res) => {
+        let totals = []
+        let dates = []
+
+        const [...transactions] = res.data
+
+        if(transactions.length === 0) return
+
+        for(let item of transactions) {
+            totals.push(item.total)
+            dates.push(item.created_at)
+        }
+
+        console.log({totals});
+
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: String(res.data.balance),
+                labels: dates,
                 datasets: [{
-                    label: res.data.name,
-                    data: String(res.data.balance),
+                    label: transactions[0].wallet.name,
+                    data: totals,
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -32,15 +46,15 @@ getData('/wallets/' + user_id)
                 }]
             },
             options: {
-                animations: {
-                    tension: {
-                        duration: 1000,
-                        easing: 'linear',
-                        from: 1,
-                        to: 0,
-                        loop: true
-                    }
-                },
+                // animations: {
+                //     tension: {
+                //         duration: 1000,
+                //         easing: 'linear',
+                //         from: 1,
+                //         to: 0,
+                //         loop: true
+                //     }
+                // },
             },
             scales: {
                 y: {
