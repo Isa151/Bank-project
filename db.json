@@ -78,6 +78,13 @@
       "name": "Visa",
       "сurrency": "UZS",
       "balance": 280000
+    },
+    {
+      "id": "d0be",
+      "user_id": "1ba8",
+      "name": "VISA",
+      "сurrency": "AED",
+      "balance": "100"
     }
   ],
   "transactions": [
