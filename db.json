@@ -57,6 +57,13 @@
       "name": "visa",
       "сurrency": "AED",
       "balance": "3223"
+    },
+    {
+      "id": "ca15",
+      "user_id": "464e",
+      "name": "VISA",
+      "сurrency": "USD",
+      "balance": "100"
     }
   ],
   "transactions": [
