@@ -31,175 +31,237 @@
   ],
   "wallets": [
     {
-      "id": "c9dc",
+      "id": "0ce7",
       "user_id": "3b33",
       "name": "Master Card",
       "сurrency": "AED",
-      "balance": 50
+      "balance": 2950
     },
     {
-      "id": "617d",
-      "user_id": "3b33",
-      "name": "Tinkoff",
-      "сurrency": "BND",
-      "balance": 200
-    },
-    {
-      "id": "c789",
-      "user_id": "3b33",
-      "name": "Visa Card",
-      "сurrency": "UZS",
-      "balance": 10
-    },
-    {
-      "id": "8e78",
+      "id": "581d",
       "user_id": "3b33",
       "name": "Uz Card",
       "сurrency": "UZS",
-      "balance": 18500
+      "balance": 7500
     },
     {
-      "id": "e974",
+      "id": "0d6a",
       "user_id": "3b33",
-      "name": "Humo Card",
-      "сurrency": "RUB",
-      "balance": 20000
-    },
-    {
-      "id": "b096",
-      "user_id": "464e",
-      "name": "Baxt",
-      "сurrency": "USD",
-      "balance": 0
-    },
-    {
-      "id": "7a74",
-      "user_id": "464e",
-      "name": "Visa",
-      "сurrency": "UZS",
-      "balance": 280000
+      "name": "Tinkoff",
+      "сurrency": "BND",
+      "balance": 24500
     }
   ],
   "transactions": [
     {
-      "id": "22b7",
-      "user_id": "464e",
-      "created_at": "2024-2-15",
-      "updated_at": "2024-2-15",
+      "id": "0207",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
       "wallet": {
-        "id": "b096",
-        "name": "Baxt",
-        "сurrency": "USD",
-        "balance": "100"
+        "id": "0ce7",
+        "name": "Master Card",
+        "сurrency": "AED",
+        "balance": "20000"
       },
-      "total": "30",
-      "category": "car",
-      "wallet_id": "b096"
+      "total": "2000",
+      "category": "Food",
+      "wallet_id": "0ce7"
     },
     {
-      "id": "faf1",
-      "user_id": "464e",
-      "created_at": "2024-2-15",
-      "updated_at": "2024-2-15",
+      "id": "bc21",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
       "wallet": {
-        "id": "b096",
-        "name": "Baxt",
-        "сurrency": "USD",
-        "balance": 70
+        "id": "0ce7",
+        "name": "Master Card",
+        "сurrency": "AED",
+        "balance": 18000
       },
-      "total": "20",
-      "category": "Car",
-      "wallet_id": "b096"
+      "total": "500",
+      "category": "Toys",
+      "wallet_id": "0ce7"
     },
     {
-      "id": "b750",
-      "user_id": "464e",
-      "created_at": "2024-2-15",
-      "updated_at": "2024-2-15",
+      "id": "d05e",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
       "wallet": {
-        "id": "b096",
-        "name": "Baxt",
-        "сurrency": "USD",
-        "balance": 50
+        "id": "0ce7",
+        "name": "Master Card",
+        "сurrency": "AED",
+        "balance": 17500
       },
-      "total": "14",
-      "category": "food",
-      "wallet_id": "b096"
+      "total": "750",
+      "category": "Watches",
+      "wallet_id": "0ce7"
     },
     {
-      "id": "be12",
-      "user_id": "464e",
-      "created_at": "2024-2-15",
-      "updated_at": "2024-2-15",
+      "id": "5d05",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
       "wallet": {
-        "id": "b096",
-        "name": "Baxt",
-        "сurrency": "USD",
-        "balance": 36
+        "id": "0ce7",
+        "name": "Master Card",
+        "сurrency": "AED",
+        "balance": 16750
       },
-      "total": "16",
-      "category": "food",
-      "wallet_id": "b096"
+      "total": "1000",
+      "category": "Clothes",
+      "wallet_id": "0ce7"
     },
     {
-      "id": "c288",
-      "user_id": "464e",
-      "created_at": "2024-2-15",
-      "updated_at": "2024-2-15",
+      "id": "0df5",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
       "wallet": {
-        "id": "b096",
-        "name": "Baxt",
-        "сurrency": "USD",
-        "balance": 20
+        "id": "0ce7",
+        "name": "Master Card",
+        "сurrency": "AED",
+        "balance": 15750
       },
-      "total": "20",
-      "category": "home",
-      "wallet_id": "b096"
+      "total": "2500",
+      "category": "Shops",
+      "wallet_id": "0ce7"
     },
     {
-      "id": "5d77",
-      "user_id": "464e",
-      "created_at": "2024-2-15",
-      "updated_at": "2024-2-15",
+      "id": "8ed5",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
       "wallet": {
-        "id": "7a74",
-        "name": "Visa",
+        "id": "0d6a",
+        "name": "Tinkoff",
+        "сurrency": "BND",
+        "balance": "50000"
+      },
+      "total": "4500",
+      "category": "Phone",
+      "wallet_id": "0d6a"
+    },
+    {
+      "id": "1b66",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
+      "wallet": {
+        "id": "0d6a",
+        "name": "Tinkoff",
+        "сurrency": "BND",
+        "balance": 45500
+      },
+      "total": "9000",
+      "category": "Horses",
+      "wallet_id": "0d6a"
+    },
+    {
+      "id": "dae3",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
+      "wallet": {
+        "id": "0ce7",
+        "name": "Master Card",
+        "сurrency": "AED",
+        "balance": 13250
+      },
+      "total": "10000",
+      "category": "Macbook",
+      "wallet_id": "0ce7"
+    },
+    {
+      "id": "48c5",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
+      "wallet": {
+        "id": "0ce7",
+        "name": "Master Card",
+        "сurrency": "AED",
+        "balance": 3250
+      },
+      "total": "50",
+      "category": "Pen",
+      "wallet_id": "0ce7"
+    },
+    {
+      "id": "f0d0",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
+      "wallet": {
+        "id": "0d6a",
+        "name": "Tinkoff",
+        "сurrency": "BND",
+        "balance": 36500
+      },
+      "total": "12000",
+      "category": "Books",
+      "wallet_id": "0d6a"
+    },
+    {
+      "id": "2f27",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
+      "wallet": {
+        "id": "0ce7",
+        "name": "Master Card",
+        "сurrency": "AED",
+        "balance": 3200
+      },
+      "total": "250",
+      "category": "Pizza",
+      "wallet_id": "0ce7"
+    },
+    {
+      "id": "df33",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
+      "wallet": {
+        "id": "581d",
+        "name": "Uz Card",
         "сurrency": "UZS",
-        "balance": "1000000"
+        "balance": "30000"
       },
-      "total": "200000",
-      "category": "food",
-      "wallet_id": "7a74"
+      "total": "15000",
+      "category": "Lamborghini",
+      "wallet_id": "581d"
     },
     {
-      "id": "504d",
-      "user_id": "464e",
-      "created_at": "2024-2-15",
-      "updated_at": "2024-2-15",
+      "id": "a855",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
       "wallet": {
-        "id": "7a74",
-        "name": "Visa",
+        "id": "581d",
+        "name": "Uz Card",
         "сurrency": "UZS",
-        "balance": 800000
+        "balance": 15000
       },
-      "total": "400000",
-      "category": "home",
-      "wallet_id": "7a74"
+      "total": "5000",
+      "category": "Toys and Doll",
+      "wallet_id": "581d"
     },
     {
-      "id": "39ca",
-      "user_id": "464e",
-      "created_at": "2024-2-15",
-      "updated_at": "2024-2-15",
+      "id": "2695",
+      "user_id": "3b33",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
       "wallet": {
-        "id": "7a74",
-        "name": "Visa",
+        "id": "581d",
+        "name": "Uz Card",
         "сurrency": "UZS",
-        "balance": 400000
+        "balance": 10000
       },
-      "total": "120000",
-      "category": "shop",
-      "wallet_id": "7a74"
+      "total": "2500",
+      "category": "Dolls",
+      "wallet_id": "581d"
     }
   ]
 }
