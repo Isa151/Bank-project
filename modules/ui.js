@@ -33,12 +33,19 @@ export function createHeader(place) {
 
     a_account.innerHTML = JSON.parse(localStorage.getItem('user')).email;
 
-    a_account.setAttribute('href', '#')
+
+
     // append
     place.append(header)
     header.append(nav, account)
     nav.append(a_home, a_my_wallets, a_transactions)
     account.append(a_account)
+
+    a_account.onclick = () => {
+        localStorage.clear()
+        location.assign('/pages/signin/')
+    }
+    
 }
 
 function getGradient() {
@@ -53,25 +60,26 @@ function getGradient() {
 
 export function reload_wallets(arr, place) {
     place.innerHTML = ''
-     place.ondblclick = () => {
-        location.assign(`/pages/3Dcard/`)
-     }
+
     for (let item of arr) {
         let creditCardDiv = document.createElement('div');
-          let secondSpanDiv = document.createElement('div');
+        let secondSpanDiv = document.createElement('div');
         let firstSpanDiv = document.createElement('div');
+        let link = document.createElement('a');
 
         creditCardDiv.style.background = `linear-gradient(84deg, ${getGradient()} 2.27%, ${getGradient()} 92.26%)`
-        firstSpanDiv.classList.add('first_span');
         creditCardDiv.classList.add(`my_credit_card`);
+        link.classList.add('card_link');
+        link.setAttribute('href', `/pages/card/?id=${item.id}`);
+        firstSpanDiv.classList.add('first_span');
         firstSpanDiv.innerHTML = item.name;
         secondSpanDiv.classList.add('second_span');
-        secondSpanDiv.innerHTML = item.currency;
+        secondSpanDiv.innerHTML = item.сurrency;
 
         creditCardDiv.append(firstSpanDiv);
         creditCardDiv.append(secondSpanDiv);
-        place.append(creditCardDiv);
-        
+        link.append(creditCardDiv);
+        place.append(link);
     }
 
 }
@@ -92,7 +100,7 @@ export function reload_table(arr, place) {
         td1.innerHTML = item.id;
         td2.innerHTML = item.wallet.name;
         td3.innerHTML = item.category;
-        td4.innerHTML = `${item.total} ${item.wallet.currency}`;
+        td4.innerHTML = `${item.total} ${item.wallet.сurrency}`;
         td5.innerHTML = item.created_at;
 
         // append
@@ -101,4 +109,12 @@ export function reload_table(arr, place) {
     }
 }
 
-    
+export function storedUserData() {
+    let storedUserData = JSON.parse(localStorage.getItem('user'));
+    document.getElementById('name').innerHTML = `Добро пожаловать, ` + storedUserData.name + ' ' + storedUserData.surname;
+}
+
+export function storedUserEmail() {
+    let storedUserEmail = JSON.parse(localStorage.getItem('user'));
+    document.getElementById('email').innerHTML = ' ' + storedUserEmail.email;
+}

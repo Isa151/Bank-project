@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Credit Card</title>
+    <link rel="stylesheet" href="/pages/card/style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    
+
+    <div class="first_container">
+
+        <div class="credit_card_container">
+
+            <div class="bottom"></div>
+            <div class="circle"></div>
+
+            <div class="big_texts">
+
+                <div class="score">
+                    <h4>Order No:</h4>
+                    <span>#35264555</span>
+                    <select>
+                        <option id="first_currencies" value="USD">USD</option>
+                        <!-- <option value="UZS">UZS</option>
+                        <option value="RUB">RUB</option>
+                        <option value="EURO">EURO</option> -->
+                    </select>
+                </div>
+
+                <div class="item_and_total">
+
+                    <h4 id="item_name">Loading...</h4>
+                    <h4 id="item_currency">Loading...</h4>
+                    <h4 id="item_balance">Loading...</h4>
+                    <!-- <h4>Item ................. $12</h4> -->
+
+                    <div class="line"></div>
+                    <select id="currencies">
+                        <option value="not-selected">Not-Selected</option>
+                    </select>
+
+                    <h3 class="h3_text" id="from" >Loading...</h3>
+                    <h3 class="h3_text_second" id="to" >Loading...</h3>
+
+                    <div class="line"></div>
+
+                    <h3 class="h3_text_second" id="total">Loading...</h3>
+
+                    <div class="line"></div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="big_block">
+            
+            <div class="container">
+
+                <div class="card-container">
+        
+                    <div class="front">
+        
+                        <div class="image">
+                            <!-- <img src="/images/visa_card_icon.png" alt=""> -->
+                            <div class="p_text" id="cards">Visa Card</div>
+                            <img class="imgad" src="/images/chip.png" alt="">
+                        </div>
+        
+                        <div class="card-number-box">###################</div>
+                        <div class="flexbox">
+                            <div class="box">
+                                <span>Cardholder Name</span>
+                                <div class="card-holder-name">full name</div>
+                            </div>
+        
+                            <div class="box">
+        
+                                <span>Expiration</span>
+                                <div class="expiration">
+                                    <span class="exp-month">mm</span>
+                                    <span class="exp-year">yy</span>
+                                </div>
+        
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="back">
+        
+                        <div class="stripe"></div>
+        
+                        <div class="box">
+                            <span>Cvv</span>
+                            <div class="cvv-box"></div>
+                            <!-- <img src="/images/visa_card_icon.png" alt=""> -->
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
+                <form action="">
+
+                    <div class="inputBox">
+                        <input type="text" maxlength="19" class="card-holder-input" placeholder="Cardholder Name">
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="text" maxlength="19" class="card-number-input" placeholder="Card Number">
+                    </div>
+                    
+                    <div class="flexbox">
+                        <div class="inputBox">
+        
+                            <select name="" id="" class="month-input">
+                                <option value="month" selected disabled>Expiration date</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+        
+                        </div>
+        
+                        <div class="inputBox">
+        
+                            <select name="" id="" class="year-input">
+                                <option value="year" selected disabled>Security Code</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                                <option value="2032">2032</option>
+                                <option value="2033">2033</option>
+                                <option value="2034">2034</option>
+                                <option value="2035">2035</option>
+                            </select>
+        
+                        </div>
+        
+                        <div class="inputBox">
+                            <input type="text" maxlength="4" class="cvv-input" placeholder="Cvv">
+                        </div>
+        
+                    </div>
+
+                    <div class="flex_center">
+                        <input type="submit" value="Pay Now" class="submit-btn">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                    </div>
+
+                    <div class="center_box">
+                        <input class="input_checkbox" type="checkbox">
+                        <span class="span_text">I Agree to Terms & Conditions</span>
+                    </div>
+                   
+                </form>
+        
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="chart_text">
+        <h1>Line Chart</h1>
+    </div>
+
+    <div class="container_chart">
+        <div class="chart">
+            <canvas id="myChart" width="1200" height="700"></canvas>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+        integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+    <script type="module" src="/pages/card/creditcard.js"></script>
+    <script type="module" src="/scripts/chartfirst.js"></script>
+
+
+</body>
+</html>
