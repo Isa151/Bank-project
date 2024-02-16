@@ -33,13 +33,19 @@ export function createHeader(place) {
 
     a_account.innerHTML = JSON.parse(localStorage.getItem('user')).email;
 
-    a_account.setAttribute('href', '#')
-    a_account.setAttribute('href', '/pages/signup/')
+
+
     // append
     place.append(header)
     header.append(nav, account)
     nav.append(a_home, a_my_wallets, a_transactions)
     account.append(a_account)
+
+    a_account.onclick = () => {
+        localStorage.clear()
+        location.assign('/pages/signin/')
+    }
+    
 }
 
 function getGradient() {
