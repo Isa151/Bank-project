@@ -27,6 +27,13 @@
       "name": "Baxtzod",
       "surname": "Rasulov",
       "password": "baxt2008"
+    },
+    {
+      "id": "ef61",
+      "email": "arabitdinovislom@gmail.com",
+      "name": "Islom",
+      "surname": "Arabitdinov",
+      "password": "2008290150isa"
     }
   ],
   "wallets": [
@@ -114,6 +121,7 @@
       "сurrency": "AED",
       "balance": "5555"
     }
+
   ],
   "transactions": [
     {
@@ -265,6 +273,21 @@
       "total": "20",
       "category": "car",
       "wallet_id": "d0be"
+    },
+    {
+      "id": "4534",
+      "user_id": "ef61",
+      "created_at": "2024-2-16",
+      "updated_at": "2024-2-16",
+      "wallet": {
+        "id": "10f2",
+        "name": "Islom",
+        "сurrency": "USD",
+        "balance": "1000000"
+      },
+      "total": "500000",
+      "category": "car",
+      "wallet_id": "10f2"
     }
   ]
 }
