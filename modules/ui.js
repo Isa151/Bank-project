@@ -33,12 +33,19 @@ export function createHeader(place) {
 
     a_account.innerHTML = JSON.parse(localStorage.getItem('user')).email;
 
-    a_account.setAttribute('href', '#')
+
+
     // append
     place.append(header)
     header.append(nav, account)
     nav.append(a_home, a_my_wallets, a_transactions)
     account.append(a_account)
+
+    a_account.onclick = () => {
+        localStorage.clear()
+        location.assign('/pages/signin/')
+    }
+    
 }
 
 function getGradient() {
@@ -58,9 +65,12 @@ export function reload_wallets(arr, place) {
         let creditCardDiv = document.createElement('div');
         let secondSpanDiv = document.createElement('div');
         let firstSpanDiv = document.createElement('div');
+        let link = document.createElement('a');
 
         creditCardDiv.style.background = `linear-gradient(84deg, ${getGradient()} 2.27%, ${getGradient()} 92.26%)`
         creditCardDiv.classList.add(`my_credit_card`);
+        link.classList.add('card_link');
+        link.setAttribute('href', `/pages/card/?id=${item.id}`);
         firstSpanDiv.classList.add('first_span');
         firstSpanDiv.innerHTML = item.name;
         secondSpanDiv.classList.add('second_span');
@@ -68,7 +78,8 @@ export function reload_wallets(arr, place) {
 
         creditCardDiv.append(firstSpanDiv);
         creditCardDiv.append(secondSpanDiv);
-        place.append(creditCardDiv);
+        link.append(creditCardDiv);
+        place.append(link);
     }
 
 }
@@ -96,4 +107,14 @@ export function reload_table(arr, place) {
         place.append(tr);
         tr.append(td1, td2, td3, td4, td5);
     }
+}
+
+export function storedUserData() {
+    let storedUserData = JSON.parse(localStorage.getItem('user'));
+    document.getElementById('name').innerHTML = `Добро пожаловать, ` + storedUserData.name + ' ' + storedUserData.surname;
+}
+
+export function storedUserEmail() {
+    let storedUserEmail = JSON.parse(localStorage.getItem('user'));
+    document.getElementById('email').innerHTML = ' ' + storedUserEmail.email;
 }

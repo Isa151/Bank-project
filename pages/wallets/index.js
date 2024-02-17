@@ -1,5 +1,5 @@
 import { getData } from "/modules/helpers"
-import { reload_wallets, createHeader } from "/modules/ui"
+import { reload_wallets, createHeader, storedUserEmail } from "/modules/ui"
 
 const container_header = document.querySelector('.container_header')
 let cont_two = document.querySelector('.container2 .center')
@@ -8,7 +8,7 @@ let gmail = document.querySelector('.management #email')
 
 gmail.innerHTML = user.email;
 createHeader(container_header)
-
+storedUserEmail()
 
 getData('/wallets?user_id=' + user.id)
     .then(res => {
